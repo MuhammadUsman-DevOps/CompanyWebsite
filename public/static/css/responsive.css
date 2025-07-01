@@ -1,0 +1,370 @@
+@media(max-width:1071px) {
+    .hero-section h2 {
+        font-size: 42px;
+    }
+
+    .hero-section p {
+        font-size: 16px;
+    }
+
+    .hero-div {
+        padding: 116px 0 0 0;
+
+    }
+}
+
+@media(max-width: 815px) {
+    .tech-logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #logoSlider {
+        gap: 100px;
+    }
+}
+
+@media (max-width: 968px) {
+    nav {
+        font-size: 8px;
+    }
+
+    .tech-logo {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 35px;
+    }
+
+    .section-heading {
+        font-size: 35px;
+        font-weight: 700;
+        line-height: 30px;
+    }
+
+    .service-title {
+        font-size: 12px;
+    }
+
+    .service img {
+        width: 40px;
+        height: 40px;
+    }
+
+
+    .service-des {
+        font-size: 11px;
+    }
+
+    .dev-box h1 {
+        font-size: 20px;
+    }
+
+    .dev-box p {
+        font-size: 14px;
+    }
+
+    .products h2 {
+        font-size: 20px;
+    }
+
+    .products p {
+        font-size: 12px;
+    }
+
+    .products button {
+        font-size: 12px;
+    }
+
+    .lab-container h1 {
+        font-size: 35px;
+    }
+
+    .achievement-section h1 {
+        font-size: 35px;
+    }
+
+    .achievement-boxes h2 {
+        font-size: 15px;
+    }
+
+    .hero-section h2 {
+        font-size: 48px;
+    }
+
+    .footer-menu p {
+        font-size: 12px !important;
+
+    }
+
+    .footer-menu h2 {
+        font-size: 14px !important;
+    }
+
+    .footer-logo p {
+        font-size: 15px;
+    }
+
+
+    /* //Services css on mobile */
+    .service-container {
+        flex-wrap: wrap;
+    }
+
+    .section-para {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .dev-box {
+        width: 100%;
+    }
+
+    .products {
+        width: 47%;
+        height: 300px;
+        margin-bottom: 20px;
+    }
+
+    .products img {
+        height: 150px;
+    }
+
+
+    .case-study-container {
+        row-gap: 20px;
+    }
+
+    .case-study-box {
+        width: 48%;
+    }
+
+    .lab-container div {
+        width: 100%;
+    }
+
+    .lab-container {
+        row-gap: 30px;
+    }
+
+    .section-heading {
+        line-height: 40px;
+    }
+
+    .blog-container .blog-box {
+        width: 45%;
+    }
+
+    .blog-box h2 {
+        font-size: 20px;
+    }
+
+    .read-blog-link,
+    .all-services-link,
+    .all-case-study-link {
+        font-size: 12px;
+    }
+
+    .blog-container {
+        row-gap: 20px;
+    }
+
+
+    .hero-section h2 {
+        font-size: 25px;
+        line-height: 2;
+    }
+
+    .hero-div p {
+        font-size: 15px;
+    }
+
+    .hero-div button {
+        font-size: 14px;
+        padding: 12px 18px;
+    }
+}
+
+@media(max-width:699px) {
+    .products {
+        width: 100%;
+        height: 280px;
+    }
+
+    .case-study-box {
+        width: 80%;
+        height: 200px;
+        margin: auto;
+
+    }
+
+    .all-case-study-link {
+        margin-left: 35px;
+    }
+
+    .blog-container .blog-box {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+
+
+
+
+@media(max-width:506px) {
+
+    .services {
+        padding: 100px 45px;
+    }
+
+    #logoSlider {
+        gap: 50px;
+    }
+
+    .section-heading {
+        line-height: 35px;
+        font-size: 26px;
+    }
+
+    .dev-section {
+        padding: 100px 50px;
+    }
+
+    .product-section {
+        padding: 100px 50px;
+    }
+
+    .products h2 {
+        font-size: 16px;
+    }
+
+    .products p {
+        font-size: 10px;
+    }
+
+    .products button {
+        font-size: 10px;
+    }
+
+    .products {
+        margin: auto;
+    }
+
+    .div-img {
+        height: 250px;
+    }
+
+    .products img {
+        width: 100%;
+        height: 7rem;
+    }
+
+    .case-study-section,
+    .lab-section {
+        padding: 100px 50px;
+    }
+
+    .lab-container h1 {
+        font-size: 26px;
+    }
+
+    .lab-container p {
+        font-size: 14px;
+    }
+
+    .achievement-section {
+        padding: 70px 50px;
+    }
+
+    .achievement-section h1 {
+        font-size: 27px;
+    }
+
+    .achievement-section p {
+        font-size: 14px;
+    }
+
+    .achievement-boxes h2 {
+        font-size: 12px;
+    }
+
+    .blog-section {
+        padding: 100px 50px;
+    }
+    .hero-section{
+        height: 95vh;
+    }
+    
+    .hero-section h2 {
+ 
+        line-height: 1.6;
+        font-size: 32px;
+        margin-top: 10px;
+        padding: 0 36px;
+
+    }
+
+    .hero-div p {
+        font-size: 15px;
+        text-align: center;
+    }
+    
+
+    .hero-div button {
+        font-size: 13px;
+        color: #ffff;
+        background-color: rgb(8, 170, 234);
+        padding: 12px 15px;
+        border-radius: 5px;
+    }
+
+    .hero-div button:hover {
+        background-color: #ffff;
+        color: rgb(7, 7, 7);
+
+    }
+
+
+
+    .tech-logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+
+}
+
+
+
+@media(max-width:307px){
+    .hero-section h2{
+        margin-top: 100px;
+        font-size: 28px;
+    }
+
+    .hero-div p {
+        font-size: 12px;
+    }
+    .hero-div button {
+        font-size: 8px;
+    }
+    #logoSlider {
+        gap: 30px;
+    }
+    .hero-div button {
+        font-size: 8px;
+        padding: 7px 10px;
+    }
+
+}
+
+
+
+
+@media (max-width : 1119px) {
+    .blog-box h2 {
+        font-size: 12px;
+    }
+
+
+}
