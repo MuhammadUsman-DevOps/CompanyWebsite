@@ -3,6 +3,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const techGrid = document.querySelector('.tech-grid');
 
   const techData = {
+
+      frontend: [
+          { name: 'React', logo: '/static/images/about-img/react-js-logo.svg' },
+          { name: 'Vue.js', logo: '/static/images/about-img/vuejs-logo.svg' },
+          { name: 'Angular', logo: '/static/images/about-img/angular-logo.svg' }
+      ],
+      backend: [
+          { name: 'Php', logo: '/static/images/about-img/php-logo.svg' },
+          { name: 'Phython', logo: '/static/images/about-img/python-logo.svg' },
+          { name: 'Node Js', logo: '/static/images/about-img/node-js-logo.svg' }
+
+      ],
+      databases: [
+          { name: 'MySQL', logo: '/static/images/about-img/mysql.png' },
+          { name: 'MongoDB', logo: '/static/images/about-img/mongodb.png' },
+          { name: 'PostgreSQL', logo: '/static/images/about-img/postgre-sql.png' }
+      ],
+      cloud: [
+          { name: 'AWS', logo: '/static/images/about-img/aws-elasticache.svg' },
+          { name: 'Azure', logo: '/static/images/about-img/azure-logo.svg' },
+          { name: 'Google Cloud', logo: '/static/images/about-img/google-cloud.svg' }
+      ],
+
     WebServices: [
       { name: 'Web APIs', logo: '/static/images/about-img/web-api.png' },
       { name: 'SOP Services', logo: '/static/images/about-img/soap.png' },

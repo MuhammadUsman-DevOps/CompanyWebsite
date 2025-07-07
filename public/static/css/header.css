@@ -93,7 +93,6 @@ div a img {
 
 }
 .service-dropdown-menu .img-div img{
-    background-color: var(--primary-color);
     width: 25px;
     height: 25px;
 }
@@ -103,7 +102,9 @@ div a img {
 .service-grid #first-box {
     grid-row: span 5;
     flex-direction: column;
-    row-gap: 10px;
+    row-gap: 5px;
+    width: 253px;
+    height: 285px;
     column-gap: 10px;
     text-align: center;
     padding: 60px 10px 30px 10px;
@@ -186,9 +187,10 @@ div a img {
 }
 
 .grid-item img {
-    margin: 8px;
+    margin: 6px;
     width: 30px;
     height: 30px;
+    margin-top: 8px;
 }
 
 
@@ -567,6 +569,13 @@ div a img {
     font-weight: 600;
     color: #333;
     margin-bottom: 5px;
+}
+.product-name a {
+    color: #333 !important;
+}
+
+.product-name a:hover {
+   color: #1e40af !important;
 }
 
 .product-description {

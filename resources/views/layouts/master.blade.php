@@ -57,85 +57,85 @@
                             </div>
 
                             <div class="grid-item">
-                                <a href="/services.html" class="services-tittle">
+
                                     <div class="img-div">
-                                        <img src="{{ asset('static/images/coding-img.png') }}" alt="">
+                                      <a href="{{route('web_app_development')}}" >  <img src="{{ asset('static/images/services/web-app-icon.svg') }}" alt=""> </a>
                                     </div>
-                                    <span>Web App Development</span>
+                                <a href="{{route('web_app_development')}}" class="services-tittle">    <span>Web App Development</span>
                                 </a>
                             </div>
 
                             <div class="grid-item">
                                 <div class="img-div">
-                                    <a href="services.html"> <img src="{{ asset('static/images/coding-img.png') }}"
-                                                                  alt=""> </a></div>
-                                <a href="/services.html " class="services-tittle"> <span>Mobile
+                                    <a href="{{route('mobile_app_development')}}"> <img src="{{ asset('static/images/services/app-dev-icon.svg') }}"
+                                                                  alt=""> </a> </div>
+                                <a href="{{route('mobile_app_development')}}" class="services-tittle"> <span>Mobile
                       Developement</span> </a>
                             </div>
 
                             <div class="grid-item">
-                                <div class="img-div"><a href="services.html"> <img
-                                            src="{{ asset('static/images/coding-img.png') }}" alt=""> </a></div>
-                                <a href="/services.html " class="services-tittle"> <span>Block Chain
+                                <div class="img-div"> <a href= "{{route('blockchain_development')}}"> <img
+                                            src="{{ asset('static/images/services/blockchain-icon.svg') }}" alt=""> </a></div>
+                                <a href= "{{route('blockchain_development')}}" class="services-tittle"> <span>Block Chain
                       Developement</span> </a>
                             </div>
 
                             <div class="grid-item">
-                                <div class="img-div"><a href="services.html"> <img
-                                            src="{{ asset('static/images/coding-img.png') }}" alt=""> </a></div>
-                                <a href="/services.html " class="services-tittle"> <span>UI/UX Developement</span> </a>
+                                <div class="img-div"><a href="{{route('ui_ux_development')}}"> <img
+                                            src="{{ asset('static/images/services/ui-ux-icon.svg') }}" alt=""> </a></div>
+                                <a href="{{route('ui_ux_development')}}" class="services-tittle"> <span>UI/UX Developement</span> </a>
                             </div>
 
                             <div class="grid-item">
-                                <div class="img-div"><a href="services.html"> <img
-                                            src="{{ asset('static/images/coding-img.png') }}" alt=""> </a></div>
-                                <a href="/services.html " class="services-tittle"> <span>Ecommerce
+                                <div class="img-div"><a href="{{route('ecommerce_development')}}"> <img
+                                            src="{{ asset('static/images/services/ecommerce-icon.svg') }}" alt=""> </a></div>
+                                <a href = "{{route('ecommerce_development')}}" class="services-tittle"> <span>Ecommerce
                       Developement</span> </a>
                             </div>
 
                             <div class="grid-item">
-                                <div class="img-div"><a href="services.html"> <img
-                                            src="{{ asset('static/images/coding-img.png') }}" alt=""> </a></div>
-                                <a href="/services.html " class="services-tittle"> <span>Wordpress
+                                <div class="img-div"><a href="{{route('wordpress_development')}}"> <img
+                                            src="{{ asset('static/images/services/wordpress-icon.svg') }}" alt=""> </a></div>
+                                <a href= "{{route('wordpress_development')}}" class="services-tittle"> <span>Wordpress
                       Developement</span> </a>
                             </div>
 
                             <div class="grid-item">
-                                <div class="img-div"><a href="services.html"> <img
-                                            src="{{ asset('static/images/coding-img.png') }}" alt=""> </a></div>
-                                <a href="/services.html " class="services-tittle"> <span>Digital Marketing</span> </a>
+                                <div class="img-div"><a href="{{route('digital_marketing')}}" > <img
+                                            src="{{ asset('static/images/services/digital-marketing-icon.svg') }}" alt=""> </a></div>
+                                <a href="{{route('digital_marketing')}}" class="services-tittle"> <span>Digital Marketing</span> </a>
                             </div>
 
                             <div class="grid-item">
-                                <div class="img-div"><a href="services.html"> <img
-                                            src="{{ asset('static/images/coding-img.png') }}" alt=""> </a></div>
-                                <a href="/services.html " class="services-tittle"> <span>Quality Assurance (QA
+                                <div class="img-div"><a href="{{route('quality_assurance')}}"> <img
+                                            src="{{ asset('static/images/services/quality-assurance-icon.svg') }}" alt=""> </a></div>
+                                <a href= "{{route('quality_assurance')}}" class="services-tittle"> <span>Quality Assurance (QA
                       Testing)</span> </a>
                             </div>
 
                             <div class="grid-item">
-                                <div class="img-div"><a href="services.html"> <img
-                                            src="{{ asset('static/images/coding-img.png') }}" alt=""> </a></div>
-                                <a href="/services.html " class="services-tittle"> <span>Full Stack
+                                <div class="img-div"><a href= "{{route('full_stack_development')}}" > <img
+                                            src="{{ asset('static/images/services/full-stack-developer-icon.svg') }}" alt=""> </a></div>
+                                <a href="{{route('full_stack_development')}}" class="services-tittle"> <span>Full Stack
                       Developement</span> </a>
                             </div>
 
                             <div class="grid-item">
-                                <div class="img-div"><a href="services.html"> <img
-                                            src="{{ asset('static/images/coding-img.png') }}" alt=""> </a></div>
-                                <a href="/services.html " class="services-tittle"> <span>Ai Developement</span> </a>
+                                <div class="img-div"><a href= "{{route('ai_development')}}" > <img
+                                            src="{{ asset('static/images/services/ai-icon.svg') }}" alt=""> </a></div>
+                                <a href= "{{route('ai_development')}}" class="services-tittle"> <span>Ai Developement</span> </a>
                             </div>
 
                             <div class="grid-item">
-                                <div class="img-div"><a href="services.html"> <img
-                                            src="{{ asset('static/images/coding-img.png') }}" alt=""> </a></div>
-                                <a href="/services.html " class="services-tittle"> <span>Game Developement</span> </a>
+                                <div class="img-div"><a href= "{{route('game_development')}}"> <img
+                                            src="{{ asset('static/images/services/game-dev-icon.svg') }}" alt=""> </a></div>
+                                <a href= "{{route('game_development')}}" class="services-tittle"> <span>Game Developement</span> </a>
                             </div>
 
                             <div class="grid-item">
-                                <div class="img-div"><a href="services.html"> <img
-                                            src="{{ asset('static/images/coding-img.png') }}" alt=""> </a></div>
-                                <a href="/services.html " class="services-tittle"> <span>App Developement</span> </a>
+                                <div class="img-div"><a href= "{{route('app_development')}}"> <img
+                                            src="{{ asset('static/images/services/app-icon.svg') }}" alt=""> </a></div>
+                                <a href= "{{route('app_development')}}" class="services-tittle"> <span>App Developement</span> </a>
                             </div>
 
 
@@ -152,40 +152,41 @@
                     <div class="products-dropdown-menu">
                         <div class="products-grid">
                             <div class="product-grid-item">
-                                <div class="product-img-div"><img src="{{ asset('static/images/down-arrow.png') }}"
+                                <div class="product-img-div"><img src="{{ asset('static/images/products/zaayve.png') }}"
                                                                   alt="Product 1"></div>
                                 <div class="product-info">
-                                    <div class="product-name">Codex</div>
-                                    <div class="product-description">Innovative solution for your needs.</div>
+                                    <div class="product-name"> <a href=" https://zaayve.com" target="_blank"> Zaayve AI </a> </div>
+                                    <div class="product-description">Productivity Across Every Domain</div>
                                 </div>
                             </div>
                             <div class="product-grid-item">
-                                <div class="product-img-div"><img src="{{ asset('static/images/down-arrow.png') }}"
+                                <div class="product-img-div"><img src="{{ asset('static/images/products/whatsappToPdf.webp') }}"
                                                                   alt="Product 2"></div>
                                 <div class="product-info">
-                                    <div class="product-name">Xpert</div>
-                                    <div class="product-description">Streamlined performance booster.</div>
+                                    <div class="product-name"> <a href="https://whatsapptopdf.com" target="_blank"> WhatsApp To PDF  </a> </div>
+                                    <div class="product-description"> Whatsapp chats to pdf, easy. </div>
                                 </div>
                             </div>
                             <div class="product-grid-item">
-                                <div class="product-img-div"><img src="{{ asset('static/images/down-arrow.png') }}"
+                                <div class="product-img-div"> <img src="{{ asset('static/images/products/gmailCleaner.png') }}"
                                                                   alt="Product 3"></div>
                                 <div class="product-info">
-                                    <div class="product-name">ToolBox</div>
-                                    <div class="product-description">Reliable and efficient tool.</div>
+                                    <div class="product-name"> <a href="https://multcleaner.com/" target="_blank"> Multi Cleaner </a></div>
+                                    <div class="product-description">Efficient gmail cleaner tool.</div>
                                 </div>
                             </div>
                             <div class="product-grid-item">
-                                <div class="product-img-div"><img src="{{ asset('static/images/down-arrow.png') }}"
+                                <div class="product-img-div"><img src="{{ asset('static/images/products/order-connects.png') }}"
                                                                   alt="Product 4"></div>
                                 <div class="product-info">
-                                    <div class="product-name">Teches</div>
-                                    <div class="product-description">Advanced technology for growth.</div>
+                                    <div class="product-name"> <a href="https://orderconnects.com" target="_blank">Order Connects </a></div>
+                                    <div class="product-description">Helping the restaurant community thrive.</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </li>
+
                 <li id="hire-talent-menu">
                     <div>Hire Talent</div>
                     <div class="hiring-dropdown-menu">
@@ -195,60 +196,60 @@
                                 professionals who are adept in delivering top-notch solutions.
                             </div>
                             <div class="hiring-grid-items">
-                                <div class="img-div"><a href="hire-talent.html"> <img
-                                            src="{{ asset('static/images/php-logo.png') }}" alt=""> </a></div>
-                                <a href="hire-talent.html" class="hiring-titles"> <span>Web App Developement</span> </a>
+                                <div class="img-div"><a href="{{route('hire_web_app_developers')}}"> <img
+                                            src="{{ asset('static/images/services/web-app-icon.svg') }}" alt=""> </a></div>
+                                <a href="{{route('hire_web_app_developers')}}" class="hiring-titles"> <span> Hire Web App Developers</span> </a>
                             </div>
                             <div class="hiring-grid-items" class="hiring-titles">
-                                <div class="img-div"><a href="hire-talent.html"> <img
-                                            src="{{ asset('static/images/php-logo.png') }}" alt=""> </a></div>
-                                <a href="hire-talent.html" class="hiring-titles"> <span>Mobile Appf
-                      Developement</span> </a>
+                                <div class="img-div"><a href="{{route('hire_mobile_app_developers')}}"> <img
+                                            src="{{ asset('static/images/services/app-dev-icon.svg') }}" alt=""> </a></div>
+                                <a href="{{route('hire_mobile_app_developers')}}" class="hiring-titles"> <span> Hire Mobile App
+                      Developers</span> </a>
                             </div>
                             <div class="hiring-grid-items" class="hiring-titles">
-                                <div class="img-div"><a href="hire-talent.html"> <img
-                                            src="{{ asset('static/images/php-logo.png') }}" alt=""> </a></div>
-                                <a href="hire-talent.html" class="hiring-titles"> <span>Block Chain
-                      Developement</span> </a>
+                                <div class="img-div"><a href="{{route('hire_block_chain_developers')}}" > <img
+                                            src="{{ asset('static/images/services/blockchain-icon.svg') }}" alt=""> </a></div>
+                                <a href= "{{route('hire_block_chain_developers')}}" class="hiring-titles"> <span> Hire Block Chain
+                      Developers</span> </a>
                             </div>
                             <div class="hiring-grid-items" class="hiring-titles">
-                                <div class="img-div"><a href="hire-talent.html"> <img
-                                            src="{{ asset('static/images/php-logo.png') }}" alt=""> </a></div>
-                                <a href="hire-talent.html" class="hiring-titles"> <span>UI/UX Developement</span> </a>
+                                <div class="img-div"><a href="{{route('hire_ui_ux_developers')}}" > <img
+                                            src="{{ asset('static/images/services/ui-ux-icon.svg') }}" alt=""> </a></div>
+                                <a href="{{route('hire_ui_ux_developers')}}" class="hiring-titles"> <span>Hire UI/UX Designers</span> </a>
                             </div>
                             <div class="hiring-grid-items" class="hiring-titles">
-                                <div class="img-div"><a href="hire-talent.html"> <img
-                                            src="{{ asset('static/images/php-logo.png') }}" alt=""> </a></div>
-                                <a href="hire-talent.html" class="hiring-titles"> <span>Ecommerce
-                      Developement</span> </a>
+                                <div class="img-div"><a href="{{route('hire_ecommerce_developers')}}"> <img
+                                            src="{{ asset('static/images/services/ecommerce-icon.svg') }}" alt=""> </a></div>
+                                <a href= "{{route('hire_ecommerce_developers')}}" class="hiring-titles"> <span>Hire Ecommerce
+                      Developers</span> </a>
                             </div>
                             <div class="hiring-grid-items" class="hiring-titles">
-                                <div class="img-div"><a href="hire-talent.html"> <img
-                                            src="{{ asset('static/images/php-logo.png') }}" alt=""> </a></div>
-                                <a href="hire-talent.html" class="hiring-titles"> <span>Wordpress
-                      Developement</span> </a>
+                                <div class="img-div"><a href="{{route('hire_wordpress_developers')}}"> <img
+                                            src="{{ asset('static/images/services/wordpress-icon.svg') }}" alt=""> </a></div>
+                                <a href= "{{route('hire_wordpress_developers')}}" class="hiring-titles"> <span>Hire Wordpress
+                      Developers</span> </a>
                             </div>
                             <div class="hiring-grid-items" class="hiring-titles">
-                                <div class="img-div"><a href="hire-talent.html"> <img
-                                            src="{{ asset('static/images/php-logo.png') }}" alt=""> </a></div>
-                                <a href="hire-talent.html" class="hiring-titles"> <span>Digital Marketing</span> </a>
+                                <div class="img-div"><a href= "{{route('hire_digital_marketers')}}"> <img
+                                            src="{{ asset('static/images/services/digital-marketing-icon.svg') }}" alt=""> </a></div>
+                                <a href="{{route('hire_digital_marketers')}}" class="hiring-titles"> <span>Hire Digital Marketers</span> </a>
                             </div>
                             <div class="hiring-grid-items" class="hiring-titles">
-                                <div class="img-div"><a href="hire-talent.html"> <img
-                                            src="{{ asset('static/images/php-logo.png') }}" alt=""> </a></div>
-                                <a href="hire-talent.html" class="hiring-titles"> <span>Quality Assurance (QA
+                                <div class="img-div"><a href= "{{route('hire_quality_assurance')}}"> <img
+                                            src="{{ asset('static/images/services/quality-assurance-icon.svg') }}" alt=""> </a></div>
+                                <a href="{{route('hire_quality_assurance')}}" class="hiring-titles"> <span> Hire Quality Assurance (QA
                       Testing )</span> </a>
                             </div>
                             <div class="hiring-grid-items" class="hiring-titles">
-                                <div class="img-div"><a href="hire-talent.html"> <img
-                                            src="{{ asset('static/images/php-logo.png') }}" alt=""> </a></div>
-                                <a href="hire-talent.html" class="hiring-titles"> <span>Full Stack
-                      Developement</span> </a>
+                                <div class="img-div"><a href= "{{route('hire_full_stack_developers')}}"> <img
+                                            src="{{ asset('static/images/services/full-stack-developer-icon.svg') }}" alt=""> </a></div>
+                                <a href= "{{route('hire_full_stack_developers')}}" class="hiring-titles"> <span> Hire Full Stack
+                      Developers</span> </a>
                             </div>
                             <div class="hiring-grid-items" class="hiring-titles">
-                                <div class="img-div"><a href="hire-talent.html"> <img
-                                            src="{{ asset('static/images/php-logo.png') }}" alt=""> </a></div>
-                                <a href="hire-talent.html" class="hiring-titles"> <span>Ai Developement</span> </a>
+                                <div class="img-div"><a href="{{route('hire_ai_developers')}}"> <img
+                                            src="{{ asset('static/images/services/ai-icon.svg') }}" alt=""> </a></div>
+                                <a href="{{route('hire_ai_developers')}}" class="hiring-titles"> <span>Hire Ai Developers</span> </a>
                             </div>
 
                         </div>
@@ -303,7 +304,7 @@
             <P>About us</P>
             <p>Contact us</p>
             <p>Services</p>
-            <p>Careers</p>
+            <p> <a href="#" target="_blank">  Careers </a> </p>
         </div>
 
         <div class="footer-menu">
@@ -316,8 +317,10 @@
 
         <div class="footer-menu">
             <h2>PRODUCTS</h2>
-            <P>Zaayve AI</P>
-            <p>Order Connects</p>
+            <p> <a href="https://zaayve.com/" target="_blank">Zaayve AI  </a> </p>
+            <p>  <a href="https://orderconnects.com/" target="_blank"> Order Connects </a> </p>
+           <p> <a href="https://multcleaner.com/" target="_blank"> Multi Cleaner </a> </p>
+           <p> <a href="https://www.whatsapptopdf.com/" target="_blank"> Whatsapp To Pdf </a> </p>
 
         </div>
 

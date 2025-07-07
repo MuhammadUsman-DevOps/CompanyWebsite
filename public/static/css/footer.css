@@ -36,8 +36,20 @@
     cursor: pointer;
 }
 
+.footer-menu a {
+    text-decoration: none;
+    color: white;
+}
+
 .footer-menu p:hover {
     color: var(--primary-color);
+
+
+}
+
+.footer-menu a:hover {
+    color: var(--primary-color);
+    text-decoration: none;
 
 }
 

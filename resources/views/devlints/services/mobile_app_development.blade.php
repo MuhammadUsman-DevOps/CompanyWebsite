@@ -2,6 +2,7 @@
 @section('title') Mobile App Development @endsection
 @push('styles')
     <link rel="stylesheet" href="{{ asset('static/css/services.css') }}">
+
 @endpush
 
 @section("content")

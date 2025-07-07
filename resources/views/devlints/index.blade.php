@@ -276,25 +276,25 @@
         <div class="case-study-box">
             <div class="case-study-box-overlay"></div>
 
-            <img src="{{ asset('static/images/proudcts/image-1.png') }}" alt="">
+            <img src="{{ asset('static/images/products/image-1.png') }}" alt="">
             <button>View case study ></button>
         </div>
         <div class="case-study-box">
             <div class="case-study-box-overlay"></div>
 
-            <img src="{{ asset('static/images/proudcts/image-2.png') }}" alt="">
+            <img src="{{ asset('static/images/products/image-2.png') }}" alt="">
             <button>View case study ></button>
         </div>
         <div class="case-study-box">
             <div class="case-study-box-overlay"></div>
 
-            <img src="{{ asset('static/images/proudcts/img-3.png') }}" alt="">
+            <img src="{{ asset('static/images/products/img-3.png') }}" alt="">
             <button>View case study ></button>
         </div>
         <div class="case-study-box">
             <div class="case-study-box-overlay"></div>
 
-            <img src="{{ asset('static/images/proudcts/image-4.png') }}" alt="">
+            <img src="{{ asset('static/images/products/image-4.png') }}" alt="">
             <button>View case study ></button>
         </div>
 

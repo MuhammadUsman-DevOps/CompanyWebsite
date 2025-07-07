@@ -45,11 +45,7 @@
             <h1>Design Tools & Technologies We Use</h1>
             <p>We utilize cutting-edge tools and frameworks to build intuitive and scalable UI/UX solutions.</p>
             <div class="tech-categories">
-                <div class="tech-category" data-category="design">Figma</div>
-                <div class="tech-category" data-category="prototyping">Adobe XD</div>
-                <div class="tech-category" data-category="collaboration">Sketch</div>
-                <div class="tech-category" data-category="dev">Zeplin</div>
-                <div class="tech-category" data-category="motion">After Effects</div>
+                <div class="tech-category" data-category="designTools">Design Tools</div>
             </div>
             <div class="services-grid"></div>
         </div>

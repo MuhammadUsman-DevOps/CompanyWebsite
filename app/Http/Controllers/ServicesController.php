@@ -23,4 +23,39 @@ class ServicesController extends Controller
         return view('devlints.services.ui_ux_development');
     }
 
+    public function ecommerceDevelopment (Request $request)
+    {
+        return view ('devlints.services.ecommerce_development');
+    }
+
+    public function wordpressDevelopment(Request $request) {
+        return view ('devlints.services.wordpress_development');
+    }
+
+    public function digitalMarketing (Request $request) {
+        return view ('devlints.services.digital_marketing');
+    }
+
+    public function qualityAssurance (Request $request) {
+        return view ('devlints.services.quality_assurance');
+    }
+
+    public function fullStackDevlopment (Request $request) {
+        return view ('devlints.services.full_stack_development');
+    }
+
+    public function aiDevelopment (Request $request) {
+        return view ('devlints.services.ai_development');
+    }
+
+    public function gameDevelopment (Request $request) {
+        return view ('devlints.services.game_development');
+}
+
+    public function appDevelopment (Request $request) {
+        return view ('devlints.services.app_development');
+    }
+
+
+
 }

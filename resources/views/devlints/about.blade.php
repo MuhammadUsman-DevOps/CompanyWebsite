@@ -80,7 +80,7 @@
                     <div class="tech-logo-div"><img src="{{ asset('static/images/about-img/css.svg') }}" alt="" class="tech-img">
                         <span>CSS</span>
                     </div>
-                    <div class="tech-logo-div"><img src="{{ asset('static/images/about-img/typescript.png') }}" alt="" class="tech-img">
+                    <div class="tech-logo-div"><img src="{{ asset('static/images/about-img/typescript.png') }}" alt=""  style= "width: 80px" class="tech-img">
                         <span>TypeScript</span>
                     </div>
                     <div class="tech-logo-div"><img src="{{ asset('static/images/about-img/javascript-logo.svg') }}" alt="" class="tech-img">
@@ -108,13 +108,13 @@
                     <div class="tech-logo-div"><img src="{{ asset('static/images/about-img/android.png') }}" alt="" class="tech-img">
                         <span>Android</span>
                     </div>
-                    <div class="tech-logo-div"><img src="{{ asset('static/images/about-img/xamarin.png') }}" alt="" class="tech-img">
+                    <div class="tech-logo-div"> <img src="{{ asset('static/images/about-img/xamarin.png') }}" alt=" " style="height: 45px" class=" tech-img">
                         <span>Xamarin</span>
                     </div>
-                    <div class="tech-logo-div"><img src="{{ asset('static/images/about-img/react-native-icon.png') }}" alt="" class="tech-img">
+                    <div class="tech-logo-div"><img src="{{ asset('static/images/about-img/react-native-icon.png') }}" alt="" style="height: 80px" class="tech-img">
                         <span>React Native</span>
                     </div>
-                    <div class="tech-logo-div"><img src="{{ asset('static/images/about-img/flutter.png') }}" alt="" class="tech-img">
+                    <div class="tech-logo-div"><img src="{{ asset('static/images/about-img/flutter.png') }}" alt=""  style="height: 30px; margin-top: 20px "  class="tech-img">
                         <span>Flutter</span>
                     </div>
 
@@ -125,11 +125,11 @@
             <div class="technology-container">
                 <h3 class="technology-title">Databases</h3>
                 <div class="technology-div">
-                    <div class="tech-logo-div"><img src="{{ asset('static/images/about-img/ms-sql.svg') }}" alt="" class="tech-img"> <span>My
-              Sql</span></div>
+                    <div class="tech-logo-div"><img src="{{ asset('static/images/about-img/ms-sql.svg') }}" alt="" class="tech-img"> <span>
+              Sql Server</span></div>
                     <div class="tech-logo-div"><img src="{{ asset('static/images/about-img/mysql.png') }}" alt="" class="tech-img"> <span>My
               Sql</span></div>
-                    <div class="tech-logo-div"><img src="{{ asset('static/images/about-img/mongodb.png') }}" alt="" class="tech-img">
+                    <div class="tech-logo-div"><img src="{{ asset('static/images/about-img/mongodb.png') }}" alt="" style="height: 30px; margin-top: 20px"  class="tech-img">
                         <span>MongoDB</span>
                     </div>
                     <div class="tech-logo-div"><img src="{{ asset('static/images/about-img/postgre-sql.png') }}" alt="" class="tech-img">
