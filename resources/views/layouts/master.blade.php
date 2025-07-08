@@ -301,10 +301,10 @@
         </div>
         <div class="footer-menu">
             <h2>COMPANY</h2>
-            <P>About us</P>
-            <p>Contact us</p>
-            <p>Services</p>
-            <p> <a href="#" target="_blank">  Careers </a> </p>
+            <p><a href="{{route('about_us')}}" >  About us </a> </p>
+            <p><a href="{{route('contact_us')}}" >  Contact us </a> </p>
+            <p><a href="{{route('web_app_development')}}" >  Services </a> </p>
+            <p> <a href="{{route('careers')}}" >  Careers </a> </p>
         </div>
 
         <div class="footer-menu">

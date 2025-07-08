@@ -193,7 +193,6 @@
     .case-study-box {
         width: 80%;
         height: 200px;
-        margin: auto;
 
     }
 
@@ -294,9 +293,9 @@
     .hero-section{
         height: 95vh;
     }
-    
+
     .hero-section h2 {
- 
+
         line-height: 1.6;
         font-size: 32px;
         margin-top: 10px;
@@ -308,7 +307,7 @@
         font-size: 15px;
         text-align: center;
     }
-    
+
 
     .hero-div button {
         font-size: 13px;

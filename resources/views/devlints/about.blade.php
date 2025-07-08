@@ -52,13 +52,13 @@
             <div class="technology-container">
                 <h3 class="technology-title">Backend Technologies</h3>
                 <div class="technology-div">
-                    <div class="tech-logo-div"><img src="{{ asset('static/images/about-img/php-logo.svg') }}" alt="" class="tech-img">
+                    <div class="tech-logo-div"><img src="{{ asset('static/images/services/php-logo.svg') }}" alt="" class="tech-img">
                         <span>Php</span>
                     </div>
-                    <div class="tech-logo-div"><img src="{{ asset('static/images/about-img/python-logo.svg') }}" alt="" class="tech-img">
+                    <div class="tech-logo-div"><img src="{{ asset('static/images/services/python-logo.svg') }}" alt="" class="tech-img">
                         <span>Phyton</span>
                     </div>
-                    <div class="tech-logo-div"><img src="{{ asset('static/images/about-img/node-js-logo.svg') }}" alt="" class="tech-img">
+                    <div class="tech-logo-div"><img src="{{ asset('static/images/services/node-js-logo.svg') }}" alt="" class="tech-img">
                         <span>Node Js</span>
                     </div>
                     <div class="tech-logo-div"><img src="{{ asset('static/images/about-img/net-logo.svg') }}" alt="" class="tech-img">
@@ -86,14 +86,14 @@
                     <div class="tech-logo-div"><img src="{{ asset('static/images/about-img/javascript-logo.svg') }}" alt="" class="tech-img">
                         <span>JS</span>
                     </div>
-                    <div class="tech-logo-div"><img src="{{ asset('static/images/about-img/angular-logo.svg') }}" alt="" class="tech-img">
+                    <div class="tech-logo-div"><img src="{{ asset('static/images/services/angular-logo.svg') }}" alt="" class="tech-img">
                         <span>Angular</span>
                     </div>
 
-                    <div class="tech-logo-div"><img src="{{ asset('static/images/about-img/react-js-logo.svg') }}" alt="" class="tech-img">
+                    <div class="tech-logo-div"><img src="{{ asset('static/images/services/react-js-logo.svg') }}" alt="" class="tech-img">
                         <span>React Js</span>
                     </div>
-                    <div class="tech-logo-div"><img src="{{ asset('static/images/about-img/vuejs-logo.svg') }}" alt="" class="tech-img">
+                    <div class="tech-logo-div"><img src="{{ asset('static/images/services/vuejs-logo.svg') }}" alt="" class="tech-img">
                         <span>Veu.Js</span>
                     </div>
                 </div>
@@ -111,7 +111,7 @@
                     <div class="tech-logo-div"> <img src="{{ asset('static/images/about-img/xamarin.png') }}" alt=" " style="height: 45px" class=" tech-img">
                         <span>Xamarin</span>
                     </div>
-                    <div class="tech-logo-div"><img src="{{ asset('static/images/about-img/react-native-icon.png') }}" alt="" style="height: 80px" class="tech-img">
+                    <div class="tech-logo-div"><img src="{{ asset('static/images/services/react-native-icon.png') }}" alt="" style="height: 80px" class="tech-img">
                         <span>React Native</span>
                     </div>
                     <div class="tech-logo-div"><img src="{{ asset('static/images/about-img/flutter.png') }}" alt=""  style="height: 30px; margin-top: 20px "  class="tech-img">
@@ -125,14 +125,14 @@
             <div class="technology-container">
                 <h3 class="technology-title">Databases</h3>
                 <div class="technology-div">
-                    <div class="tech-logo-div"><img src="{{ asset('static/images/about-img/ms-sql.svg') }}" alt="" class="tech-img"> <span>
+                    <div class="tech-logo-div"><img src="{{ asset('static/images/services/ms-sql.svg') }}" alt="" class="tech-img"> <span>
               Sql Server</span></div>
-                    <div class="tech-logo-div"><img src="{{ asset('static/images/about-img/mysql.png') }}" alt="" class="tech-img"> <span>My
+                    <div class="tech-logo-div"><img src="{{ asset('static/images/services/mysql.png') }}" alt="" class="tech-img"> <span>My
               Sql</span></div>
-                    <div class="tech-logo-div"><img src="{{ asset('static/images/about-img/mongodb.png') }}" alt="" style="height: 30px; margin-top: 20px"  class="tech-img">
+                    <div class="tech-logo-div"><img src="{{ asset('static/images/services/mongodb.png') }}" alt="" style="height: 30px; margin-top: 20px"  class="tech-img">
                         <span>MongoDB</span>
                     </div>
-                    <div class="tech-logo-div"><img src="{{ asset('static/images/about-img/postgre-sql.png') }}" alt="" class="tech-img">
+                    <div class="tech-logo-div"><img src="{{ asset('static/images/services/postgre-sql.png') }}" alt="" class="tech-img">
                         <span>Postgre Sql</span>
                     </div>
                 </div>
