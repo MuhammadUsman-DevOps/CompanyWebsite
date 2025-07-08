@@ -29,7 +29,7 @@
                         <li>Speed Optimization & SEO-Friendly Architecture</li>
                         <li>Scalable and Secure Solutions</li>
                     </ul>
-                    <a href="#" class="btn">Request a Free Quote</a>
+                    <a href="{{route('contact_us')}}" class="btn">Request a Free Quote</a>
                 </div>
                 <div class="ecommerce-text"></div>
             </div>

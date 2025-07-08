@@ -31,7 +31,7 @@
                         <li>Design Systems & Component Libraries</li>
                         <li>Flexible Hiring Engagements</li>
                     </ul>
-                    <a href="#" class="btn">Request a Free Quote</a>
+                    <a href="{{route('contact_us')}}" class="btn">Request a Free Quote</a>
                 </div>
                 <div class="ui-ux-text"></div>
             </div>

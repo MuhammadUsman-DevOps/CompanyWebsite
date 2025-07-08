@@ -31,7 +31,7 @@
                         <li>WordPress Speed & Security Optimization</li>
                         <li>Flexible Hiring Models (Hourly / Monthly / Project-Based)</li>
                     </ul>
-                    <a href="#" class="btn">Request a Free Quote</a>
+                    <a href="{{route('contact_us')}}" class="btn">Request a Free Quote</a>
                 </div>
                 <div class="wordpress-text"></div>
             </div>

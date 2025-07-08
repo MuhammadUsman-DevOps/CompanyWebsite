@@ -29,7 +29,7 @@
                         <li>Bug Reporting & Test Case Documentation</li>
                         <li>End-to-End QA Support</li>
                     </ul>
-                    <a href="#" class="btn">Get a Free QA Consultation</a>
+                    <a href="{{route('contact_us')}}" class="btn">Get a Free QA Consultation</a>
                 </div>
                 <div class="qa-text"></div>
             </div>

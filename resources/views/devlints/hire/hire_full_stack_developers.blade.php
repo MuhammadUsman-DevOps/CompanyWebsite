@@ -30,7 +30,7 @@
                         <li>Agile & Scalable Development</li>
                         <li>Flexible Hiring Models</li>
                     </ul>
-                    <a href="#" class="btn">Request a Free Consultation</a>
+                    <a href="{{route('contact_us')}}" class="btn">Request a Free Consultation</a>
                 </div>
                 <div class="fullStack-developer-text"></div>
             </div>

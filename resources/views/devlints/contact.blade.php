@@ -28,14 +28,14 @@
                     @csrf
 
                     <div class="row">
-                        <div>
+
                             <label>First name</label>
                             <input type="text" name="first_name" placeholder="First name" required>
-                        </div>
-                        <div>
+
+
                             <label>Last name</label>
                             <input type="text" name="last_name" placeholder="Last name" required>
-                        </div>
+
                     </div>
 
                     <label>Email</label>
@@ -56,15 +56,13 @@
             <div class="info-column">
                 <h3>Chat with us</h3>
 
-                <p><a href="#">example@gmail.com</a></p>
-                <p><a href="https://wa.me/01234567899">01234567899</a></p>
+                <p><a href="#">info@devlints.com</a></p>
+                <p><a href="https://wa.me/01234567899">+92 307 0861396</a></p>
 
                 <h3>Call us</h3>
                 <p>Call our team Mon–Fri from 8am to 5pm.</p>
-                <p><a href="tel:+1555000000">+1 (555) 000–0000</a></p>
+                <p><a href="tel:+1555000000">+92 307 0861396</a></p>
 
-                <h3>Visit us</h3>
-                <p><a href="#">100 Smith Street, Collingwood VIC 3066</a></p>
             </div>
         </div>
 

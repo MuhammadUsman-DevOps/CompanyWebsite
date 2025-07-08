@@ -30,7 +30,7 @@
                         <li>Secure & Transparent Code</li>
                         <li>Flexible Engagement Models</li>
                     </ul>
-                    <a href="#" class="btn">Request a Free Quote</a>
+                    <a href="{{route('contact_us')}}" class="btn">Request a Free Quote</a>
                 </div>
                 <div class="block-chain-text"></div>
             </div>

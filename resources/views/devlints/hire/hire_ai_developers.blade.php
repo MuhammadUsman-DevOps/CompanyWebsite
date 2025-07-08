@@ -30,7 +30,7 @@
                         <li>Predictive Analytics & Data Science</li>
                         <li>AI Chatbots & Recommendation Engines</li>
                     </ul>
-                    <a href="#" class="btn">Request a Free AI Consultation</a>
+                    <a href="{{route('contact_us')}}" class="btn">Request a Free AI Consultation</a>
                 </div>
                 <div class="ai-text"></div>
             </div>

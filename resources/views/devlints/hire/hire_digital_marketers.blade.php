@@ -29,7 +29,7 @@
                         <li>Conversion-Focused Landing Pages</li>
                         <li>Performance Reports & KPI Tracking</li>
                     </ul>
-                    <a href="#" class="btn">Get a Free Marketing Proposal</a>
+                    <a href="{{route('contact_us')}}"  class="btn">Get a Free Marketing Proposal</a>
                 </div>
                 <div class="digital-marketing-text"></div>
             </div>

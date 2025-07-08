@@ -29,7 +29,7 @@
                         <li>Timely Delivery & Ongoing Support</li>
                         <li>Customizable Hiring Models</li>
                     </ul>
-                    <a href="#" class="btn">Request a Free Quote</a>
+                    <a href="{{route('contact_us')}}" class="btn">Request a Free Quote</a>
                 </div>
                 <div class="web-app-text"></div>
             </div>
