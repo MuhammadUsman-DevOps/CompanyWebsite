@@ -9,7 +9,8 @@ class BlogController extends Controller
 {
    public function index(){
 
-       $blogs = Blog::all();
+       $blogs = Blog::where('status', 'published')->get();
+
    }
 
     public function blogDetailView(Request $request, $slug)

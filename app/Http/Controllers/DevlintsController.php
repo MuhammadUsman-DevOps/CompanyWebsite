@@ -10,7 +10,7 @@ class DevlintsController extends Controller
 {
     public function homeView(Request $request)
     {
-        $blogs = Blog::all();
+        $blogs = Blog::where('status', 'published')->get();
         $caseStudies = CaseStudy::all(); // Fetch all records
         return view('devlints.index',  compact('blogs','caseStudies'));
     }

@@ -285,7 +285,7 @@
 
 
     </div>
-    <a href="/" class="all-case-study-link">View all case studies ></a>
+    <a href="#" class="all-case-study-link">View all case studies ></a>
 
 </section>
 
