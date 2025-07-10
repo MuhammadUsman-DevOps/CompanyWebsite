@@ -273,30 +273,16 @@
 
     <div class="case-study-container">
 
+       @foreach($caseStudies as $caseStudy)
         <div class="case-study-box">
             <div class="case-study-box-overlay"></div>
 
-            <img src="{{ asset('static/images/products/image-1.png') }}" alt="">
-            <button>View case study ></button>
-        </div>
-        <div class="case-study-box">
-            <div class="case-study-box-overlay"></div>
 
-            <img src="{{ asset('static/images/products/image-2.png') }}" alt="">
-            <button>View case study ></button>
+            <img src="{{ asset('storage/'. $caseStudy->thumbnail) }}" alt="">
+            <button> <a href="{{route('case_study_detail', $caseStudy->slug)}}"  style="text-decoration: none"> View case study >  </a></button>
         </div>
-        <div class="case-study-box">
-            <div class="case-study-box-overlay"></div>
+        @endforeach
 
-            <img src="{{ asset('static/images/products/img-3.png') }}" alt="">
-            <button>View case study ></button>
-        </div>
-        <div class="case-study-box">
-            <div class="case-study-box-overlay"></div>
-
-            <img src="{{ asset('static/images/products/image-4.png') }}" alt="">
-            <button>View case study ></button>
-        </div>
 
     </div>
     <a href="/" class="all-case-study-link">View all case studies ></a>
@@ -357,28 +343,28 @@
 <section class="blog-section">
 
     <h2 class="section-heading">Blogs & Publicationss</h2>
+
     <p class="section-para">
         Sharing insights, updates, and stories that inspire and inform.
     </p>
 
     <div class="blog-container">
 
+    @foreach($blogs as $blog)
+
         <div class="blog-box">
-            <img src="{{ asset('static/images/blogs/blog-card3.png') }}" alt="">
-            <h2>Requesting camera and microphone permission in an Electron app</h2>
-            <p><span>Usman</span> <br> January 25, 2025</p>
-        </div>
-        <div class="blog-box">
-            <img src="{{ asset('static/images/blogs/blog-card1.png') }}" alt="">
-            <h2>How to remotely EV code-sign a windows application using ssl.com</h2>
-            <p><span>Usman</span> <br> January 25, 2025</p>
-        </div>
-        <div class="blog-box">
-            <img src="{{ asset('static/images/blogs/blog-card2.png') }}" alt="">
-            <h2>Using native modules in Electron</h2>
-            <p><span>Usman</span> <br> January 25, 2025</p>
+
+            <img src="{{ asset('storage/' . $blog->featured_image) }}" alt="{{ $blog->title }}" style="filter: brightness(50%);">
+
+
+            <a href="{{ route('blog_detail', $blog->slug) }}"> <h2> {{$blog->title}} </h2> </a>
+            <p >
+                <span>{{ $blog->author_name ?? 'Admin' }}</span>  <span style="font-weight: 400; font-size: 16px; margin-left: 10px" >[ {{$blog->author_bio}}]</span> <br>
+                {{ optional($blog->published_at)->format('F d, Y') ?? 'Date not available' }}
+            </p>
         </div>
 
+        @endforeach
 
     </div>
 

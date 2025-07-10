@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CaseStudyController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DevlintsController;
 use App\Http\Controllers\ServicesController;
@@ -45,3 +47,8 @@ Route::group(["prefix" => "hire/"], function () {
 });
 
 Route::post('/contact', [ContactController::class, 'send']);
+
+Route::get('/case-study/{slug}', [CaseStudyController::class, 'caseStudyView'])->name('case_study_detail');
+
+Route::get('/blog/{slug}', [BlogController::class, 'blogDetailView'])->name('blog_detail');
+

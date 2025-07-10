@@ -2,14 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
+use App\Models\CaseStudy;
 use Illuminate\Http\Request;
 
 class DevlintsController extends Controller
 {
     public function homeView(Request $request)
     {
-        return view('devlints.index');
+        $blogs = Blog::all();
+        $caseStudies = CaseStudy::all(); // Fetch all records
+        return view('devlints.index',  compact('blogs','caseStudies'));
     }
+
+
 
     public function aboutView(Request $request)
     {
@@ -37,4 +43,5 @@ class DevlintsController extends Controller
     {
         return view('devlints.career');
     }
+
 }

@@ -57,11 +57,11 @@
                 <h3>Chat with us</h3>
 
                 <p><a href="#">info@devlints.com</a></p>
-                <p><a href="https://wa.me/01234567899">+92 307 0861396</a></p>
+                <p><a href="">+92 307 0861396</a></p>
 
                 <h3>Call us</h3>
                 <p>Call our team Mon–Fri from 8am to 5pm.</p>
-                <p><a href="tel:+1555000000">+92 307 0861396</a></p>
+                <p><a href="">+92 307 0861396</a></p>
 
             </div>
         </div>
