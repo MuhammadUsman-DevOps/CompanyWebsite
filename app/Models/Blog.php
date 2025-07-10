@@ -43,7 +43,6 @@ class Blog extends Model
 
         static::saving(function ($model) {
             $model->meta_title = $model->meta_title ?: Str::limit($model->title, 70);
-            $model->meta_description = $model->meta_description ?: $model->generateMetaDescription();
             $model->og_title = $model->og_title ?: Str::limit($model->meta_title, 90);
             $model->og_description = $model->og_description ?: Str::limit($model->meta_description, 200);
             $model->twitter_title = $model->twitter_title ?: Str::limit($model->meta_title, 70);
