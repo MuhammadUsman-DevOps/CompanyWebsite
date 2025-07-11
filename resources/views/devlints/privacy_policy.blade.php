@@ -5,7 +5,7 @@
     <style>
         body {
             background: linear-gradient(135deg, #e0f2fe 0%, #f5f7fa 100%);
-            overflow: hidden;
+            overflow-x: hidden;
             position: relative;
 
         }
@@ -17,7 +17,7 @@
             border-radius: 8px;
             line-height: 1.6;
 
-            overflow: hidden; /* Prevent overflow from ::before */
+            overflow-x: hidden; /* Prevent overflow-x from ::before */
         }
 
         body::before {
@@ -29,7 +29,7 @@
             height: 600px;
             background: radial-gradient(circle, rgba(59, 130, 246, 0.2), transparent);
             border-radius: 50%;
-            overflow: hidden;
+            overflow-x: hidden;
         }
 
 
