@@ -328,15 +328,12 @@
 }
 
 .prev, .next{
-    border: none;
-    background: black;
-    color: white;
-    padding: 8px 4px;
-    font-size: 26px;
-    border-radius: 50%;
-    width: 50px;
-    margin: 2px;
     cursor: pointer;
+    width: 35px;
+    padding: 4px;
+    margin: 2px;
+    background-color: #050915;
+    border-radius: 100%;
 }
 
 
