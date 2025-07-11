@@ -312,10 +312,45 @@
     row-gap: 12px;
     column-gap: 30px;
     justify-content: space-between;
+    max-width: 1350px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 80px 30px 30px 30px;
 }
 
+.nav-buttons{
+    position: absolute;
+    top: 0px;
+    right: 1px;
+
+}
+
+.prev, .next{
+    border: none;
+    background: black;
+    color: white;
+    padding: 8px 4px;
+    font-size: 26px;
+    border-radius: 50%;
+    width: 50px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    column-gap: 10px;
+
+
+}
+
+
 .products {
-    width: 48%;
+    flex: 0 0 calc(50%); /* Account for half the gap per product on */
     background-color: black;
     color: var(--text-white);
     text-align: center;
@@ -323,6 +358,12 @@
     line-height: 2;
 
 
+}
+
+@media (max-width: 768px) {
+    .products {
+        flex: 0 0 100%;
+    }
 }
 
 .products img {
@@ -569,7 +610,7 @@
     position: absolute;
     bottom: 0px;
     left: 0px;
-    padding: 50px;
+    margin: 50px;
     font-size: 13px;
     font-weight: 400;
     color: var(--text-white);

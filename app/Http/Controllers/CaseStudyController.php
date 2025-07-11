@@ -12,4 +12,10 @@ class CaseStudyController extends Controller
         $caseStudy = CaseStudy::where('slug', $slug)->firstOrFail();
         return view('devlints.case_study', compact('caseStudy'));
     }
+
+    public function allCaseStudiesView(Request $request){
+
+        $caseStudies = CaseStudy::all();
+        return view('devlints.all_case_study', compact('caseStudies'));
+    }
 }

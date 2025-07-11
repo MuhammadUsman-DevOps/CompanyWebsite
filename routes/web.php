@@ -14,6 +14,9 @@ Route::get('/service-detail', [DevlintsController::class, 'serviceDetailView'])-
 Route::get('/talent-detail', [DevlintsController::class, 'talentDetailView'])->name('talent_detail');
 Route::get('/contact-us/', [DevlintsController::class, 'contactUsView'])->name('contact_us');
 Route::get('/careers/', [DevlintsController::class, 'careerView'])->name('careers');
+Route::get('/privacy-policy', [DevlintsController::class, 'privacyPolicyView'])->name('privacy_policy');
+Route::get('/terms-conditions', [DevlintsController::class, 'termsConditionsView'])->name('terms_conditions');
+
 
 
 Route::group(["prefix" => "services/"], function () {
@@ -49,6 +52,8 @@ Route::group(["prefix" => "hire/"], function () {
 Route::post('/contact', [ContactController::class, 'send']);
 
 Route::get('/case-study/{slug}', [CaseStudyController::class, 'caseStudyView'])->name('case_study_detail');
+Route::get('/all-case-studies', [CaseStudyController::class, 'allCaseStudiesView'])->name('all_case_studies');
 
 Route::get('/blog/{slug}', [BlogController::class, 'blogDetailView'])->name('blog_detail');
+Route::get('/all-blogs', [BlogController::class, 'allBlogView'])->name('all_blogs');
 

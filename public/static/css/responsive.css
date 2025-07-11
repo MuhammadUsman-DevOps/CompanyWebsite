@@ -361,8 +361,18 @@
 
 
 @media (max-width : 1119px) {
-    .blog-box h2 {
-        font-size: 12px;
+    .blog-box p span {
+
+        font-size: 13px !important;
+    }
+
+    .blog-box p {
+        margin: 13px ;
+    }
+
+    .blog-box h2{
+        font-size: 15px;
+
     }
 
 

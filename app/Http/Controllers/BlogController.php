@@ -7,11 +7,7 @@ use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
-   public function index(){
 
-       $blogs = Blog::where('status', 'published')->get();
-
-   }
 
     public function blogDetailView(Request $request, $slug)
     {
@@ -20,6 +16,11 @@ class BlogController extends Controller
     }
 
 
+    public function allBlogView(Request $request){
+
+        $blogs = Blog::where('status', 'published')->get();
+        return view('devlints.all_blog', compact('blogs'));
+    }
 
 
 

@@ -11,11 +11,11 @@
             <p class="career-hero-para">
                 At Devlints, we believe in empowering individuals to grow personally and professionally. Our culture is rooted in collaboration, continuous learning, and creating meaningful digital experiences. Join a team where your ideas are valued, your skills are sharpened, and your work makes an impact.
             </p>
-            <button>View Open Roles</button>
+           <a href="#current-opening"> <button>View Open Roles</button> </a>
         </div>
     </section>
 
-    <section class="open-positions-section">
+    <section class="open-positions-section" id="current-opening">
         <div class="open-positions-div">
             <h2>Current Opportunities at <span>Devlints</span></h2>
             <p class="open-positions-para">
