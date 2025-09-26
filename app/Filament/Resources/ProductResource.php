@@ -31,6 +31,8 @@ class ProductResource extends Resource
                     ->required()
                     ->unique(ignoreRecord: true)
                     ->maxLength(255),
+                Forms\Components\TextInput::make('payment_gateway_id')
+                    ->maxLength(255),
 
                 Forms\Components\TextInput::make('tagline')
                     ->maxLength(255),

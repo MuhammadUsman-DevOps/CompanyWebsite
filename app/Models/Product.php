@@ -12,7 +12,6 @@ class Product extends Model
     use HasFactory, HasUlids;
 
     protected $guarded = [];
-
     public $incrementing = false;
     protected $keyType = 'string';
 
@@ -22,4 +21,10 @@ class Product extends Model
         'is_featured' => 'boolean',
         'is_active' => 'boolean',
     ];
+
+
+    public function plans()
+    {
+        return $this->hasMany(Plan::class);
+    }
 }

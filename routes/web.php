@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Billing\ProductPlanController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CaseStudyController;
 use App\Http\Controllers\ContactController;
@@ -56,4 +57,3 @@ Route::get('/all-case-studies', [CaseStudyController::class, 'allCaseStudiesView
 
 Route::get('/blog/{slug}', [BlogController::class, 'blogDetailView'])->name('blog_detail');
 Route::get('/all-blogs', [BlogController::class, 'allBlogView'])->name('all_blogs');
-
