@@ -17,9 +17,6 @@ return new class extends Migration
             $table->string('name')->nullable();
             $table->foreignId('user_id')->nullable()->constrained()->cascadeOnDelete();
             $table->timestamps();
-
-            // one row per email per product
-            $table->unique(['product_id','email']);
         });
     }
 
