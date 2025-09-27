@@ -15,7 +15,7 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->string('email')->unique();
             $table->string('name')->nullable();
-            $table->foreignUuid('user_id')->nullable()->constrained()->cascadeOnDelete();
+            $table->foreignId('user_id')->nullable()->constrained()->cascadeOnDelete();
             $table->timestamps();
 
             // one row per email per product
