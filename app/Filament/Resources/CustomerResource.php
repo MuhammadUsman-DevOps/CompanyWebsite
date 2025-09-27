@@ -19,11 +19,7 @@ class CustomerResource extends Resource
     public static function form(Form $form): Form
     {
         return $form->schema([
-            Forms\Components\Select::make('product_id')
-                ->relationship('product', 'name')
-                ->required()
-                ->searchable()
-                ->label('Product'),
+
 
             Forms\Components\TextInput::make('email')
                 ->email()
@@ -41,10 +37,6 @@ class CustomerResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('product.name')
-                    ->label('Product')
-                    ->sortable()
-                    ->searchable(),
 
                 Tables\Columns\TextColumn::make('email')
                     ->sortable()

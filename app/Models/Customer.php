@@ -29,18 +29,19 @@ class Customer extends Model
     /**
      * Relationships
      */
-    public function product()
+    public function user()
     {
-        return $this->belongsTo(Product::class);
+        return $this->belongsTo(User::class);
+    }
+
+    public function products()
+    {
+        return $this->belongsToMany(Product::class, 'customer_product')
+            ->withTimestamps();
     }
 
     public function subscriptions()
     {
         return $this->hasMany(Subscription::class);
-    }
-
-    public function user()
-    {
-        return $this->belongsTo(User::class);
     }
 }

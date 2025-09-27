@@ -34,8 +34,11 @@ class AuthController extends Controller
 
         $token = $user->createToken('@@dev12apiToken991')->plainTextToken;
 
-        // ✅ Load customer with subscriptions + plan
-        $customer = Customer::with(['subscriptions.plan'])
+        // ✅ Load single customer for this user
+        $customer = Customer::with([
+            'products',                          // via pivot
+            'subscriptions.plan.product',        // subscription → plan → product
+        ])
             ->where('user_id', $user->id)
             ->first();
 
@@ -48,21 +51,35 @@ class AuthController extends Controller
                 'role'  => $user->role ?? 'customer',
             ],
             'customer' => $customer ? [
-                'id'         => $customer->id,
-                'email'      => $customer->email,
-                'name'       => $customer->name,
-                'product_id' => $customer->product_id,
+                'id'      => $customer->id,
+                'email'   => $customer->email,
+                'name'    => $customer->name,
+                'products'=> $customer->products->map(function ($product) {
+                    return [
+                        'id'   => $product->id,
+                        'name' => $product->name,
+                        'slug' => $product->slug,
+                    ];
+                }),
                 'subscriptions' => $customer->subscriptions->map(function ($sub) {
                     return [
                         'id'                   => $sub->id,
                         'status'               => $sub->status,
-                        'valid_until'          => $sub->valid_until,
+                        'valid_until'          => optional($sub->valid_until)->toDateTimeString(),
                         'credits_remaining'    => $sub->credits_remaining,
-                        'credits_reset_at'     => $sub->credits_reset_at,
+                        'credits_reset_at'     => optional($sub->credits_reset_at)->toDateTimeString(),
+                        'paddle_subscription_id' => $sub->paddle_subscription_id,
                         'plan' => $sub->plan ? [
-                            'id'   => $sub->plan->id,
-                            'name' => $sub->plan->name,
-                            'price'=> $sub->plan->price,
+                            'id'       => $sub->plan->id,
+                            'name'     => $sub->plan->name,
+                            'price'    => $sub->plan->price,
+                            'interval' => $sub->plan->interval,
+                            'features' => $sub->plan->features,
+                            'product'  => $sub->plan->product ? [
+                                'id'   => $sub->plan->product->id,
+                                'name' => $sub->plan->product->name,
+                                'slug' => $sub->plan->product->slug,
+                            ] : null,
                         ] : null,
                     ];
                 }),

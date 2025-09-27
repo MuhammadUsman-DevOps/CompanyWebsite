@@ -3,6 +3,9 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\SubscriptionResource\Pages;
+use App\Models\Customer;
+use App\Models\Product;
+use App\Models\Plan;
 use App\Models\Subscription;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -19,50 +22,39 @@ class SubscriptionResource extends Resource
     public static function form(Form $form): Form
     {
         return $form->schema([
+            // 1. Customer
             Forms\Components\Select::make('customer_id')
                 ->relationship('customer', 'email')
                 ->label('Customer (Email)')
                 ->required()
                 ->searchable()
-                ->reactive(),   // 👈 key change
+                ->reactive(),
 
-            Forms\Components\Placeholder::make('product_name')
+            // 2. Product Dropdown
+            Forms\Components\Select::make('product_id')
                 ->label('Product')
-                ->content(function (callable $get) {
-                    $customerId = $get('customer_id');
+                ->options(Product::pluck('name', 'id'))
+                ->required()
+                ->reactive(),
 
-                    if (! $customerId) {
-                        return '—';
-                    }
-
-                    $customer = \App\Models\Customer::with('product')->find($customerId);
-
-                    return $customer?->product?->name ?? '—';
-                }),
-
-
+            // 3. Plan Dropdown (filtered by product)
             Forms\Components\Select::make('plan_id')
                 ->label('Plan')
                 ->required()
                 ->searchable()
                 ->options(function (callable $get) {
-                    $customerId = $get('customer_id');
+                    $productId = $get('product_id');
 
-                    if (! $customerId) {
+                    if (! $productId) {
                         return [];
                     }
 
-                    $customer = \App\Models\Customer::find($customerId);
-
-                    if (! $customer) {
-                        return [];
-                    }
-
-                    return \App\Models\Plan::where('product_id', $customer->product_id)
+                    return Plan::where('product_id', $productId)
                         ->where('is_active', true)
                         ->pluck('name', 'id');
                 }),
 
+            // Paddle subscription details
             Forms\Components\TextInput::make('paddle_subscription_id')
                 ->label('Paddle Subscription ID')
                 ->required(),
@@ -98,10 +90,12 @@ class SubscriptionResource extends Resource
                     ->label('Customer Email')
                     ->sortable()
                     ->searchable(),
-                Tables\Columns\TextColumn::make('plan.product.name')   // ✅ product name
-                ->label('Product')
+
+                Tables\Columns\TextColumn::make('plan.product.name')
+                    ->label('Product')
                     ->sortable()
                     ->searchable(),
+
                 Tables\Columns\TextColumn::make('plan.name')
                     ->label('Plan')
                     ->sortable()

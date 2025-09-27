@@ -12,6 +12,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Facades\Hash;
 
 class UserResource extends Resource
 {
@@ -41,6 +42,10 @@ class UserResource extends Resource
                     ->required(fn(string $context): bool => $context === 'create')
                     ->maxLength(255)
                     ->label('Password'),
+
+                Forms\Components\Toggle::make('is_admin')
+                    ->label('Is Admin')
+                    ->default(false),
             ]);
     }
 
