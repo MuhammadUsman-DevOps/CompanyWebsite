@@ -5,6 +5,7 @@ use App\Http\Controllers\Billing\CustomerController;
 use App\Http\Controllers\Billing\ProductPlanController;
 use App\Http\Controllers\Billing\SubscriptionVerificationController;
 use App\Http\Controllers\Billing\WebhookController;
+use App\Http\Controllers\BlogController;
 use App\Http\Middleware\CheckInternalApiKey;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -21,6 +22,9 @@ Route::post('/customers/add', [CustomerController::class, 'store']);
 
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
+
+    Route::get('/products/{product}/blogs', [BlogController::class, 'blogsByProduct']);
+    Route::get('/blog/{slug}', [BlogController::class, 'blogDetail']);
 });
 
 Route::post('/validate-payment/webhook', [WebhookController::class, 'handlePaddleWebhook']);

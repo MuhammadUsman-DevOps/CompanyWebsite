@@ -32,4 +32,8 @@ class Product extends Model
         return $this->belongsToMany(Customer::class, 'customer_product')
             ->withTimestamps();
     }
+
+    public function blogs(){
+        return $this->hasMany(Blog::class);
+    }
 }

@@ -20,7 +20,7 @@ class Blog extends Model
         'twitter_card', 'twitter_title', 'twitter_description', 'twitter_image',
         'content', 'featured_image', 'author_name', 'author_bio',
         'faqs', 'schema_markup', 'focus_keyword', 'seo_score',
-        'status', 'published_at', 'noindex', 'nofollow', 'redirect_url',
+        'status', 'published_at', 'noindex', 'nofollow', 'redirect_url','product_id'
     ];
 
     protected $casts = [
@@ -147,5 +147,10 @@ class Blog extends Model
             "<meta name='twitter:description' content='" . e($this->twitter_description) . "'>",
             "<meta name='twitter:image' content='" . url($this->twitter_image ?: $ogImage) . "'>",
         ]);
+    }
+
+    public function product()
+    {
+        return $this->belongsTo(Product::class);
     }
 }
