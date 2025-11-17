@@ -35,6 +35,13 @@ class BlogResource extends Resource
     public static function form(Form $form): Form
     {
         return $form->schema([
+            Select::make('product_id')
+                ->label('Product')
+                ->relationship('product', 'name') // assuming products table has "name"
+                ->searchable()
+                ->preload()
+                ->nullable()
+                ->columnSpan(6),
             TextInput::make('title')->required()->maxLength(255)->columnSpan(12),
             TextInput::make('slug')->maxLength(255)->columnSpan(12),
             FileUpload::make('featured_image')->image()->directory('blogs')->columnSpan(12),
