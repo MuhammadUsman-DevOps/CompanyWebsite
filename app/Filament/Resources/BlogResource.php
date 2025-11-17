@@ -37,7 +37,7 @@ class BlogResource extends Resource
         return $form->schema([
             Select::make('product_id')
                 ->label('Product')
-                ->relationship('product', 'name') // assuming products table has "name"
+                ->relationship('product', 'name')
                 ->searchable()
                 ->preload()
                 ->nullable()

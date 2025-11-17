@@ -22,19 +22,39 @@ class BlogController extends Controller
         return view('devlints.all_blog', compact('blogs'));
     }
 
+
+    /**
+     * Return blogs belonging to a specific product.
+     */
     public function blogsByProduct($productId)
     {
         $blogs = Blog::where('product_id', $productId)
             ->where('status', 'published')
+            ->select('title', 'slug', 'featured_image', 'meta_description', 'published_at')
             ->orderBy('published_at', 'desc')
             ->get();
 
-        return response()->json($blogs);
+        return response()->json([
+            'success' => true,
+            'data' => $blogs,
+        ]);
     }
+
+    /**
+     * Return full blog details by slug.
+     */
     public function blogDetail($slug)
     {
-        $blog = Blog::where('slug', $slug)->firstOrFail();
+        $blog = Blog::where('slug', $slug)
+            ->where('status', 'published')
+            ->firstOrFail();
 
-        return response()->json($blog);
+        return response()->json([
+            'success' => true,
+            'data' => [
+                'blog' => $blog,
+                'schema_ld' => $blog->getSchemaJsonLd(),
+            ]
+        ]);
     }
 }
