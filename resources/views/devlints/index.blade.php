@@ -224,7 +224,7 @@
 
             <div class="dev-box">
                 <img src="{{ asset('static/images/dev-logo/logo2.png') }}" alt="">
-                <h1>UI/UX Design & Prototyping</h1>
+                <h2>UI/UX Design & Prototyping</h2>
                 <p>
                     Our design-first approach ensures intuitive and engaging interfaces. From wireframes to interactive
                     prototypes, we craft user-centric experiences that align perfectly with your brand and user
@@ -234,7 +234,7 @@
 
             <div class="dev-box">
                 <img src="{{ asset('static/images/dev-logo/logo3.png') }}" alt="">
-                <h1>Code Audits & Performance Optimization</h1>
+                <h2>Code Audits & Performance Optimization</h2>
                 <p>
                     We evaluate your existing systems for code quality, security, and performance. Our team identifies
                     bottlenecks, cleans technical debt, and improves system efficiency to ensure long-term scalability
@@ -244,7 +244,7 @@
 
             <div class="dev-box">
                 <img src="{{ asset('static/images/dev-logo/logo-4.png') }}" alt="">
-                <h1>Rapid MVP Development</h1>
+                <h2>Rapid MVP Development</h2>
                 <p>
                     Need to validate your product idea fast? We specialize in building lean, functional MVPs with
                     essential features—ready to launch quickly. Ideal for startups and innovators looking to hit the
@@ -360,7 +360,7 @@
 
         <div class="lab-container">
             <div class="lab-left">
-                <h1>Hyper Lab - Academy</h1>
+                <h2>Hyper Lab - Academy</h2>
                 <p>At Hyper Lab, we teach programming through real-world projects, allowing you to gain practical
                     experience while building functional applications. Our hands-on approach and live classes helps you
                     develop the skills needed to thrive in the tech industry. For those who excel, we offer job
@@ -377,7 +377,7 @@
 
     <section class="achievement-section">
         <div>
-            <h1><span>7+ Years</span> of Delivering High Quality Software Solutions</h1>
+            <h2><span>7+ Years</span> of Delivering High Quality Software Solutions</h2>
             <p>For the past 7 years, our team has been dedicated to delivering high-quality software solutions that make
                 a real difference. With a focus on innovation and a commitment to excellence, we’ve helped businesses
                 across various industries solve complex challenges and achieve their goals. Our team’s expertise and
@@ -389,17 +389,17 @@
         <div class="achievement-boxes">
 
             <div class="box">
-                <h1>2017</h1>
+                <h2>2018</h2>
                 <h2>Year of Foundation</h2>
             </div>
 
             <div class="box">
-                <h1>100+</h1>
+                <h2>100+</h2>
                 <h2>Client Projects</h2>
             </div>
 
             <div class="box">
-                <h1>130+</h1>
+                <h2>130+</h2>
                 <h2>Team Members</h2>
             </div>
 

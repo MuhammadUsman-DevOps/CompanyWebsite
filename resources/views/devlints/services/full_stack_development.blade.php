@@ -1,7 +1,77 @@
 @extends('layouts.master')
-@section('title') Full Stack Development Services @endsection
+@section('title', 'Full Stack Development Company | Web, Mobile & APIs – Devlints')
+
+@section('meta_description', 'Devlints is a full stack development company building scalable web and mobile apps for US/UK/EU clients—frontend + backend development, API integration, database design, cloud deployment, and ongoing maintenance.')
+
+@section('meta_keywords', 'full stack development company, full stack development services, full stack developers, web and mobile development, api development, graphql api, restful api, backend development, frontend development, cloud deployment, devops')
+
+@section('og_title', 'End-to-End Full Stack Development Services | Devlints')
+@section('og_description', 'Build complete digital products with Devlints — full stack development, APIs, databases, and cloud-first architecture for US/UK/EU clients.')
+@section('og_image', asset('static/images/og/devlints-og.webp'))
+@section('og_url', url()->current())
+
+@section('twitter_title', 'Full Stack Development Services | Devlints')
+@section('twitter_description', 'Frontend + backend development, API integrations, databases, and cloud deployment—built for performance, security, and scale.')
+@section('twitter_image', asset('static/images/og/devlints-og.webp'))
+
+@section('canonical', url()->current())
+@section('robots', 'index, follow')
+
+@section('schema_name', 'Full Stack Development Services')
+@section('schema_description', 'Devlints provides full stack development services including frontend and backend development, API integrations, database design, cloud deployment, and maintenance for web and mobile applications.')
+
 @push('styles')
     <link rel="stylesheet" href="{{ asset('static/css/services.css') }}">
+@endpush
+@push('structured_data')
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"Service",
+          "name":"Full Stack Development Services",
+          "serviceType":"Full Stack Development",
+          "provider": { "@id":"{{ url('/') }}#organization" },
+  "url":"{{ url()->current() }}",
+  "areaServed":["United States","United Kingdom","Europe"],
+  "description":"Devlints provides full stack development services including frontend and backend development, API development and integrations, database design, cloud deployment, and ongoing maintenance."
+}
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"FAQPage",
+          "mainEntity":[
+            {
+              "@type":"Question",
+              "name":"Do you handle both frontend and backend development?",
+              "acceptedAnswer":{"@type":"Answer","text":"Yes. We deliver end-to-end full stack development, covering UI implementation, backend architecture, database design, and integrations."}
+            },
+            {
+              "@type":"Question",
+              "name":"Do you build and integrate APIs (REST/GraphQL)?",
+              "acceptedAnswer":{"@type":"Answer","text":"Yes. We develop and integrate RESTful and GraphQL APIs to connect services, mobile apps, third-party tools, and internal systems securely."}
+            },
+            {
+              "@type":"Question",
+              "name":"Do you deploy to the cloud and support DevOps?",
+              "acceptedAnswer":{"@type":"Answer","text":"Yes. We support cloud deployments, CI/CD, monitoring, and scalable infrastructure patterns to keep systems reliable as they grow."}
+            }
+          ]
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"BreadcrumbList",
+          "itemListElement":[
+            {"@type":"ListItem","position":1,"name":"Home","item":"{{ url('/') }}"},
+    {"@type":"ListItem","position":2,"name":"Services","item":"{{ url('/services') }}"},
+    {"@type":"ListItem","position":3,"name":"Full Stack Development","item":"{{ url()->current() }}"}
+  ]
+}
+    </script>
 @endpush
 
 @section("content")
@@ -42,7 +112,7 @@
 
     <div class="section tech-section">
         <div class="container">
-            <h1>Technologies We Use in Full Stack Development</h1>
+            <h2>Technologies We Use in Full Stack Development</h2>
             <p>Our full stack developers use modern frameworks and tools to deliver secure, maintainable, and high-performance applications.</p>
             <div class="tech-categories">
                 <div class="tech-category" data-category="frontend">Frontend</div>
@@ -56,7 +126,7 @@
 
     <div class="section">
         <div class="container">
-            <h1>Our Full Stack Development Services</h1>
+            <h2>Our Full Stack Development Services</h2>
             <div class="services-grid">
                 <div class="service-item">Custom Web & App Development</div>
                 <div class="service-item">Front-End & Back-End Integration</div>
@@ -70,7 +140,7 @@
 
     <div class="section niches-section">
         <div class="container">
-            <h1>Full Stack Solutions for All Industries</h1>
+            <h2>Full Stack Solutions for All Industries</h2>
             <p>We build robust full stack applications for businesses in diverse industries—ensuring agility, performance, and scalability.</p>
             <a href="{{ route('contact_us') }}" class="btn">Get 24/7 Support</a>
             <div class="niches-grid">

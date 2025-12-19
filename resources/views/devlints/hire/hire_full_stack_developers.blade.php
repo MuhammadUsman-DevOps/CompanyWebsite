@@ -1,4 +1,87 @@
 @extends('layouts.master')
+@section('title', 'Hire Full Stack Developers | Python Django, MERN, MEAN, Laravel + Vue – Devlints')
+
+@section('meta_description', 'Hire expert full stack developers from Devlints for US/UK/EU projects. Build scalable web and mobile apps with MERN/MEAN, Laravel + Vue, APIs, databases, and cloud—agile delivery, DevOps-ready workflows, and flexible hiring models.')
+
+@section('meta_keywords', 'hire full stack developers, full stack developers for hire, mern developers for hire, mean developers for hire, laravel vue developers, node js full stack developer, react full stack developer, api integration, microservices developers, offshore full stack developers')
+
+@section('og_title', 'Hire Expert Full Stack Developers | Devlints')
+@section('og_description', 'Dedicated full stack developers for end-to-end delivery—frontend + backend, APIs, databases, cloud, and scalable architecture with fast onboarding.')
+@section('og_image', asset('static/images/og/devlints-og.webp'))
+@section('og_url', url()->current())
+
+@section('twitter_title', 'Hire Full Stack Developers | Devlints')
+@section('twitter_description', 'Full stack developers for hire—MERN/MEAN, Laravel + Vue, APIs, cloud deployment, and DevOps-ready collaboration.')
+@section('twitter_image', asset('static/images/og/devlints-og.webp'))
+
+@section('canonical', url()->current())
+@section('robots', 'index, follow')
+
+@section('schema_name', 'Hire Full Stack Developers')
+@section('schema_description', 'Hire dedicated full stack developers from Devlints for MERN/MEAN, Laravel + Vue, APIs, databases, and cloud deployments with agile delivery and flexible engagement models.')
+@push('structured_data')
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"WebPage",
+          "name":"Hire Full Stack Developers",
+          "url":"{{ url()->current() }}",
+  "description":"Hire dedicated full stack developers from Devlints for end-to-end web and mobile development, API integration, and scalable cloud-ready architecture.",
+  "isPartOf": { "@id":"{{ url('/') }}#website" },
+  "about": { "@id":"{{ url('/') }}#organization" }
+}
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"Service",
+          "name":"Dedicated Full Stack Developers",
+          "serviceType":"Staffing / Dedicated Developers",
+          "provider": { "@id":"{{ url('/') }}#organization" },
+  "url":"{{ url()->current() }}",
+  "areaServed":["United States","United Kingdom","Europe"],
+  "description":"Dedicated full stack developers for hire: MERN/MEAN, Laravel + Vue, REST APIs, databases, microservices, cloud deployment, and DevOps collaboration."
+}
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"FAQPage",
+          "mainEntity":[
+            {
+              "@type":"Question",
+              "name":"Can I hire full stack developers for MERN, MEAN, or Laravel + Vue?",
+              "acceptedAnswer":{"@type":"Answer","text":"Yes. We provide full stack developers across MERN/MEAN and PHP/Laravel + Vue stacks depending on your product architecture and team preferences."}
+            },
+            {
+              "@type":"Question",
+              "name":"Do you handle API integration and cloud deployment?",
+              "acceptedAnswer":{"@type":"Answer","text":"Yes. We build and integrate RESTful APIs, connect third-party services, and support cloud deployments with CI/CD workflows when required."}
+            },
+            {
+              "@type":"Question",
+              "name":"What hiring models do you offer?",
+              "acceptedAnswer":{"@type":"Answer","text":"We offer flexible engagement models including hourly, monthly, and project-based hiring with timezone overlap for US/UK/EU teams."}
+            }
+          ]
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"BreadcrumbList",
+          "itemListElement":[
+            {"@type":"ListItem","position":1,"name":"Home","item":"{{ url('/') }}"},
+    {"@type":"ListItem","position":2,"name":"Hire Talent","item":"{{ url('/hire') }}"},
+    {"@type":"ListItem","position":3,"name":"Hire Full Stack Developers","item":"{{ url()->current() }}"}
+  ]
+}
+    </script>
+@endpush
+
 @push('styles')
     <link rel="stylesheet" href="{{ asset('static/css/hire-talent.css') }}">
     <link rel="stylesheet" href="{{ asset('static/css/services.css') }}">
@@ -39,7 +122,7 @@
 
     <div class="section why-hire">
         <div class="container">
-            <h1>Why Hire Full Stack Developers from Devlints?</h1>
+            <h2>Why Hire Full Stack Developers from Devlints?</h2>
             <div class="why-hire-grid">
                 <div class="why-hire-card">
                     <h3>Versatile Tech Expertise</h3>
@@ -71,7 +154,7 @@
 
     <div class="section tech-section">
         <div class="container">
-            <h1>Technology Stacks We Work With</h1>
+            <h2>Technology Stacks We Work With</h2>
             <p class="tech-para">Our full stack developers work across modern frontend frameworks, backend languages, and cloud platforms to deliver robust digital products.</p>
             <div class="tech-categories">
                 <div class="tech-category" data-category="frontend">Frontend</div>
@@ -85,7 +168,7 @@
 
     <div class="section offshore-section">
         <div class="container">
-            <h1>Why Hire Offshore Full Stack Developers?</h1>
+            <h2>Why Hire Offshore Full Stack Developers?</h2>
             <p>Partnering with Devlints gives you access to talented full stack developers worldwide—reducing cost, increasing speed, and ensuring development flexibility.</p>
             <div class="offshore-grid">
                 <div class="offshore-card">

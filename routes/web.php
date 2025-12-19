@@ -8,6 +8,7 @@ use App\Http\Controllers\DevlintsController;
 use App\Http\Controllers\DocumentationController;
 use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\HiringController;
+use App\Http\Controllers\SitemapController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [DevlintsController::class, 'homeView'])->name('home');
@@ -19,7 +20,9 @@ Route::get('/careers/', [DevlintsController::class, 'careerView'])->name('career
 Route::get('/privacy-policy', [DevlintsController::class, 'privacyPolicyView'])->name('privacy_policy');
 Route::get('/terms-conditions', [DevlintsController::class, 'termsConditionsView'])->name('terms_conditions');
 
-
+Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap.index');
+Route::get('/sitemap-pages.xml', [SitemapController::class, 'pages'])->name('sitemap.pages');
+Route::get('/sitemap-blogs.xml', [SitemapController::class, 'blogs'])->name('sitemap.blogs');
 
 Route::group(["prefix" => "services/"], function () {
    Route::get('web-app-development', [ServicesController::class, 'webAppDevelopment'])->name('web_app_development');
@@ -33,7 +36,7 @@ Route::group(["prefix" => "services/"], function () {
    Route::get('full-stack-development', [ServicesController::class, 'fullStackDevlopment'])->name('full_stack_development');
    Route::get('ai-development', [ServicesController::class, 'aiDevelopment'])->name('ai_development');
    Route::get('game-development', [ServicesController::class, 'gameDevelopment'])->name('game_development');
-   Route::get('app-development', [ServicesController::class, 'appDevelopment'])->name('app_development');
+   Route::get('android-ios-app-development', [ServicesController::class, 'appDevelopment'])->name('app_development');
 
 });
 
@@ -54,9 +57,9 @@ Route::group(["prefix" => "hire/"], function () {
 Route::post('/contact', [ContactController::class, 'send']);
 
 Route::get('/case-study/{slug}', [CaseStudyController::class, 'caseStudyView'])->name('case_study_detail');
-Route::get('/all-case-studies', [CaseStudyController::class, 'allCaseStudiesView'])->name('all_case_studies');
+Route::get('/case-studies', [CaseStudyController::class, 'allCaseStudiesView'])->name('all_case_studies');
 
 Route::get('/blog/{slug}', [BlogController::class, 'blogDetailView'])->name('blog_detail');
-Route::get('/all-blogs', [BlogController::class, 'allBlogView'])->name('all_blogs');
+Route::get('/blogs', [BlogController::class, 'allBlogView'])->name('all_blogs');
 
 Route::get('/internal/docs', [DocumentationController::class, 'index'])->name('api_documentation');

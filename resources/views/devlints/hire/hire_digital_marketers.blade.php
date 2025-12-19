@@ -1,4 +1,88 @@
 @extends('layouts.master')
+@section('title', 'Hire Digital Marketers | SEO, PPC & Social Media Experts – Devlints')
+
+@section('meta_description', 'Hire expert digital marketers from Devlints for US/UK/EU growth—SEO, Google Ads/PPC, Meta ads, content marketing, social media management, conversion optimization, and KPI reporting. Flexible engagement models.')
+
+@section('meta_keywords', 'hire digital marketers, digital marketing experts for hire, seo specialist for hire, ppc specialist for hire, google ads manager for hire, meta ads specialist, social media manager for hire, content marketing services, conversion rate optimization, marketing reporting')
+
+@section('og_title', 'Hire Expert Digital Marketers | Devlints')
+@section('og_description', 'Dedicated digital marketers for SEO, PPC, social media, content, and CRO—campaigns built for measurable ROI with transparent reporting.')
+@section('og_image', asset('static/images/og/devlints-og.webp'))
+@section('og_url', url()->current())
+
+@section('twitter_title', 'Hire Digital Marketers | Devlints')
+@section('twitter_description', 'SEO + PPC + social media experts for hire—data-driven campaigns, KPI tracking, and continuous optimization.')
+@section('twitter_image', asset('static/images/og/devlints-og.webp'))
+
+@section('canonical', url()->current())
+@section('robots', 'index, follow')
+
+@section('schema_name', 'Hire Digital Marketers')
+@section('schema_description', 'Hire dedicated digital marketers from Devlints for SEO, PPC, social media, content marketing, CRO, and performance reporting for US/UK/EU businesses.')
+
+@push('structured_data')
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"WebPage",
+          "name":"Hire Digital Marketers",
+          "url":"{{ url()->current() }}",
+  "description":"Hire dedicated digital marketers from Devlints for SEO, PPC, social media, content marketing, and CRO with KPI tracking and reporting.",
+  "isPartOf": { "@id":"{{ url('/') }}#website" },
+  "about": { "@id":"{{ url('/') }}#organization" }
+}
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"Service",
+          "name":"Dedicated Digital Marketers",
+          "serviceType":"Marketing Staffing / Dedicated Marketers",
+          "provider": { "@id":"{{ url('/') }}#organization" },
+  "url":"{{ url()->current() }}",
+  "areaServed":["United States","United Kingdom","Europe"],
+  "description":"Dedicated digital marketers for hire: SEO, PPC (Google Ads), Meta ads, content marketing, social media management, conversion optimization, and reporting."
+}
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"FAQPage",
+          "mainEntity":[
+            {
+              "@type":"Question",
+              "name":"Can I hire marketers for SEO, PPC, and social media together?",
+              "acceptedAnswer":{"@type":"Answer","text":"Yes. We provide omnichannel marketing support across SEO, Google Ads/PPC, Meta ads, content, email, and social media depending on your growth goals."}
+            },
+            {
+              "@type":"Question",
+              "name":"Do you provide tracking and performance reporting?",
+              "acceptedAnswer":{"@type":"Answer","text":"Yes. We set up analytics and conversion tracking and provide regular KPI reporting using dashboards and performance summaries."}
+            },
+            {
+              "@type":"Question",
+              "name":"Do you offer flexible hiring models?",
+              "acceptedAnswer":{"@type":"Answer","text":"Yes. We offer hourly, monthly, and project-based engagements with a focus on measurable outcomes and continuous optimization."}
+            }
+          ]
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"BreadcrumbList",
+          "itemListElement":[
+            {"@type":"ListItem","position":1,"name":"Home","item":"{{ url('/') }}"},
+    {"@type":"ListItem","position":2,"name":"Hire Talent","item":"{{ url('/hire') }}"},
+    {"@type":"ListItem","position":3,"name":"Hire Digital Marketers","item":"{{ url()->current() }}"}
+  ]
+}
+    </script>
+@endpush
+
 @push('styles')
     <link rel="stylesheet" href="{{ asset('static/css/hire-talent.css') }}">
     <link rel="stylesheet" href="{{ asset('static/css/services.css') }}">
@@ -38,7 +122,7 @@
 
     <div class="section why-hire">
         <div class="container">
-            <h1>Why Hire Digital Marketers from Devlints?</h1>
+            <h2>Why Hire Digital Marketers from Devlints?</h2>
             <div class="why-hire-grid">
                 <div class="why-hire-card">
                     <h3>Certified & Experienced Marketers</h3>
@@ -70,7 +154,7 @@
 
     <div class="section tech-section">
         <div class="container">
-            <h1>Tools & Platforms We Use in Digital Marketing</h1>
+            <h2>Tools & Platforms We Use in Digital Marketing</h2>
             <p class="tech-para">We utilize the latest marketing tools, analytics platforms, and ad technologies to deliver measurable results.</p>
             <div class="tech-categories">
                 <div class="tech-category" data-category="marketingStack">Digital Marketing Tools</div>
@@ -82,7 +166,7 @@
 
     <div class="section offshore-section">
         <div class="container">
-            <h1>Why Hire Offshore Digital Marketers?</h1>
+            <h2>Why Hire Offshore Digital Marketers?</h2>
             <p>Our offshore digital marketers offer global expertise, fast execution, and competitive pricing. Here's how you benefit with Devlints:</p>
             <div class="offshore-grid">
                 <div class="offshore-card">

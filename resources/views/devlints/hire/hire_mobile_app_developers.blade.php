@@ -1,4 +1,87 @@
 @extends('layouts.master')
+@section('title', 'Hire Mobile App Developers | Dedicated iOS, Android & Flutter – Devlints')
+
+@section('meta_description', 'Hire dedicated mobile app developers from Devlints for US/UK/EU projects. Get iOS (Swift), Android (Kotlin/Java), Flutter, and React Native developers—flexible hiring models, timezone overlap, and post-launch support.')
+
+@section('meta_keywords', 'hire mobile app developers, hire ios developers, hire android developers, flutter developers for hire, react native developers for hire, dedicated mobile developers, offshore mobile app developers, remote app developers, mobile app development team')
+
+@section('og_title', 'Hire Dedicated Mobile App Developers | Devlints')
+@section('og_description', 'Hire experienced iOS, Android, Flutter, and React Native developers for scalable, secure mobile apps. Flexible engagement and fast onboarding.')
+@section('og_image', asset('static/images/og/devlints-og.webp'))
+@section('og_url', url()->current())
+
+@section('twitter_title', 'Hire Mobile App Developers | Devlints')
+@section('twitter_description', 'Dedicated iOS/Android/Flutter/React Native developers for hire—agile delivery, timezone-aligned collaboration, and ongoing support.')
+@section('twitter_image', asset('static/images/og/devlints-og.webp'))
+
+@section('canonical', url()->current())
+@section('robots', 'index, follow')
+
+@section('schema_name', 'Hire Mobile App Developers')
+@section('schema_description', 'Hire dedicated mobile app developers from Devlints for iOS, Android, Flutter, and React Native projects with flexible hiring models and post-launch support.')
+@push('structured_data')
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"WebPage",
+          "name":"Hire Mobile App Developers",
+          "url":"{{ url()->current() }}",
+  "description":"Hire dedicated iOS, Android, Flutter, and React Native developers from Devlints with flexible engagement models and timezone overlap.",
+  "isPartOf": { "@id":"{{ url('/') }}#website" },
+  "about": { "@id":"{{ url('/') }}#organization" }
+}
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"Service",
+          "name":"Dedicated Mobile App Developers",
+          "serviceType":"Staffing / Dedicated Developers",
+          "provider": { "@id":"{{ url('/') }}#organization" },
+  "url":"{{ url()->current() }}",
+  "areaServed":["United States","United Kingdom","Europe"],
+  "description":"Dedicated mobile app developers for hire: iOS (Swift), Android (Kotlin/Java), Flutter, React Native, UI/UX, integrations, and maintenance."
+}
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"FAQPage",
+          "mainEntity":[
+            {
+              "@type":"Question",
+              "name":"Can I hire iOS, Android, or Flutter developers full-time or part-time?",
+              "acceptedAnswer":{"@type":"Answer","text":"Yes. We offer flexible hiring models including full-time, part-time, and project-based engagement for iOS, Android, Flutter, and React Native developers."}
+            },
+            {
+              "@type":"Question",
+              "name":"Do you build native apps and cross-platform apps?",
+              "acceptedAnswer":{"@type":"Answer","text":"Yes. We build native iOS/Android apps and cross-platform apps with Flutter or React Native depending on your requirements and timeline."}
+            },
+            {
+              "@type":"Question",
+              "name":"Do you provide post-launch support and maintenance?",
+              "acceptedAnswer":{"@type":"Answer","text":"Yes. We provide ongoing updates, OS compatibility maintenance, performance improvements, and feature iterations after launch."}
+            }
+          ]
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"BreadcrumbList",
+          "itemListElement":[
+            {"@type":"ListItem","position":1,"name":"Home","item":"{{ url('/') }}"},
+    {"@type":"ListItem","position":2,"name":"Hire Developers","item":"{{ url('/hire') }}"},
+    {"@type":"ListItem","position":3,"name":"Hire Mobile App Developers","item":"{{ url()->current() }}"}
+  ]
+}
+    </script>
+@endpush
+
 @push('styles')
     <link rel="stylesheet" href="{{ asset('static/css/hire-talent.css') }}">
     <link rel="stylesheet" href="{{ asset('static/css/services.css') }}">
@@ -38,7 +121,7 @@
 
     <div class="section why-hire">
         <div class="container">
-            <h1>Why Hire Mobile App Developers from Devlints?</h1>
+            <h2>Why Hire Mobile App Developers from Devlints?</h2>
             <div class="why-hire-grid">
                 <div class="why-hire-card">
                     <h3>Platform Expertise</h3>
@@ -70,7 +153,7 @@
 
     <div class="section tech-section">
         <div class="container">
-            <h1>Technologies We Use in Mobile App Development</h1>
+            <h2>Technologies We Use in Mobile App Development</h2>
             <p class="tech-para">Our developers utilize modern tech stacks and development tools to build mobile apps that are fast, reliable, and easy to maintain.</p>
             <div class="tech-categories">
                 <div class="tech-category" data-category="ios">iOS</div>
@@ -84,7 +167,7 @@
 
     <div class="section offshore-section">
         <div class="container">
-            <h1>Why Hire Offshore Mobile App Developers?</h1>
+            <h2>Why Hire Offshore Mobile App Developers?</h2>
             <p>Hiring offshore mobile developers from Devlints ensures quality, flexibility, and faster time to market at significantly lower costs. Here are the major benefits:</p>
             <div class="offshore-grid">
                 <div class="offshore-card">

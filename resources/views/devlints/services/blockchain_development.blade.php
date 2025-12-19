@@ -1,5 +1,75 @@
 @extends('layouts.master')
-@section('title') Blockchain Development @endsection
+@section('title', 'Blockchain Development Company | Smart Contracts & DApps – Devlints')
+
+@section('meta_description', 'Devlints is a blockchain development company building smart contracts, DApps, NFT marketplaces, and private blockchain solutions for US/UK/EU clients—secure, scalable, and audit-ready.')
+
+@section('meta_keywords', 'blockchain development company, blockchain development services, smart contract development, solidity developers, dapp development, ethereum development, polygon development, nft marketplace development, crypto wallet development')
+
+@section('og_title', 'Blockchain Development Services | Smart Contracts & DApps – Devlints')
+@section('og_description', 'Build secure smart contracts, DApps, NFT marketplaces, and private blockchain solutions with Devlints for US/UK/EU clients.')
+@section('og_image', asset('static/images/og/devlints-og.webp'))
+@section('og_url', url()->current())
+
+@section('twitter_title', 'Blockchain Development Company | Devlints')
+@section('twitter_description', 'Smart contracts, DApps, NFT marketplaces, wallets, and private blockchain solutions—built securely and scalable.')
+@section('twitter_image', asset('static/images/og/devlints-og.webp'))
+
+@section('canonical', url()->current())
+@section('robots', 'index, follow')
+
+@section('schema_name', 'Blockchain Development Services')
+@section('schema_description', 'Devlints builds blockchain solutions for US/UK/EU clients including smart contracts, DApps, NFT marketplaces, wallets, and private blockchain systems.')
+@push('structured_data')
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"Service",
+          "name":"Blockchain Development Services",
+          "serviceType":"Blockchain Development",
+          "provider": { "@id":"{{ url('/') }}#organization" },
+  "url":"{{ url()->current() }}",
+  "areaServed":["United States","United Kingdom","Europe"],
+  "description":"Devlints provides blockchain development services including smart contracts, DApps, NFT marketplaces, crypto wallets, and private blockchain solutions."
+}
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"FAQPage",
+          "mainEntity":[
+            {
+              "@type":"Question",
+              "name":"Do you develop and audit smart contracts?",
+              "acceptedAnswer":{"@type":"Answer","text":"Yes. We develop and review smart contracts (e.g., Solidity) with a security-first approach, including testing and best-practice checks to reduce risk."}
+            },
+            {
+              "@type":"Question",
+              "name":"Which blockchains do you support for DApp development?",
+              "acceptedAnswer":{"@type":"Answer","text":"We build DApps across popular ecosystems such as Ethereum-compatible chains (e.g., Ethereum, Polygon, BNB Chain) depending on your product requirements."}
+            },
+            {
+              "@type":"Question",
+              "name":"Can you build NFT marketplaces and crypto wallets?",
+              "acceptedAnswer":{"@type":"Answer","text":"Yes. We build NFT marketplaces and wallet experiences, including backend services, integrations, and security-focused implementations."}
+            }
+          ]
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"BreadcrumbList",
+          "itemListElement":[
+            {"@type":"ListItem","position":1,"name":"Home","item":"{{ url('/') }}"},
+    {"@type":"ListItem","position":2,"name":"Services","item":"{{ url('/services') }}"},
+    {"@type":"ListItem","position":3,"name":"Blockchain Development","item":"{{ url()->current() }}"}
+  ]
+}
+    </script>
+@endpush
+
 @push('styles')
     <link rel="stylesheet" href="{{ asset('static/css/services.css') }}">
 @endpush
@@ -46,7 +116,7 @@
 
     <div class="section tech-section">
         <div class="container">
-            <h1>Technologies We Work With</h1>
+            <h2>Technologies We Work With</h2>
             <p>We use the latest blockchain protocols, platforms, and tools to build robust, scalable, and secure blockchain solutions.</p>
             <div class="tech-categories">
                 <div class="tech-category" data-category="platforms">Platforms</div>
@@ -59,7 +129,7 @@
 
     <div class="section">
         <div class="container">
-            <h1>Blockchain Development Services</h1>
+            <h2>Blockchain Development Services</h2>
             <div class="services-grid">
                 <div class="service-item">Smart Contract Development</div>
                 <div class="service-item">DApp Development</div>
@@ -73,7 +143,7 @@
 
     <div class="section niches-section">
         <div class="container">
-            <h1>Blockchain Solutions for All Industries</h1>
+            <h2>Blockchain Solutions for All Industries</h2>
             <p>We empower industries with decentralized technologies to improve security, traceability, and operational efficiency.</p>
             <a href="#" class="btn">Get 24/7 Support</a>
             <div class="niches-grid">

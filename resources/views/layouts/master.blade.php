@@ -2,9 +2,99 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Home - Devlints')</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link rel="icon" href="{{ asset('static/images/favicon.ico') }}" type="image/x-icon">
+
+    {{-- Title --}}
+    <title>@yield('title', 'Devlints – Delivering Custom Software with Agile Processes and Expert Talent')</title>
+
+    {{-- Basic SEO --}}
+    <meta name="description"
+          content="@yield('meta_description', 'Devlints builds scalable web apps, mobile apps, and SaaS platforms for US/UK/EU clients — fast delivery, clean architecture, and reliable long-term support.')">
+    <meta name="keywords"
+          content="@yield('meta_keywords', 'web app development, mobile app development, saas development, full stack development, custom software development, devlints')">
+
+    <link rel="canonical" href="@yield('canonical', url()->current())">
+    <meta name="robots" content="@yield('robots', 'index, follow')">
+
+    {{-- Open Graph --}}
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="@yield('og_title', 'Devlints – Custom Software, Web Apps, Mobile Apps & SaaS')">
+    <meta property="og:description"
+          content="@yield('og_description', 'We build modern web apps, mobile apps, and SaaS products for US/UK/EU clients with secure, scalable architecture.')">
+    <meta property="og:image" content="@yield('og_image', asset('static/images/og/devlints-og.webp'))">
+    <meta property="og:url" content="@yield('og_url', url()->current())">
+
+    {{-- Twitter --}}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="@yield('twitter_title', 'Devlints – Web Apps, Mobile Apps & SaaS Development')">
+    <meta name="twitter:description"
+          content="@yield('twitter_description', 'Build secure, scalable software with Devlints — web apps, mobile apps, and SaaS platforms.')">
+    <meta name="twitter:image" content="@yield('twitter_image', asset('static/images/og/devlints-og.webp'))">
+    <meta property="og:type" content="@yield('og_type','website')">
+    <meta name="author" content="@yield('meta_author','Devlints Team')">
+
+    @stack('meta')
+
+
+    @php
+        $schemaOrgName = config('app.name', 'Devlints');
+        $schemaOrgUrl  = url('/');
+        $schemaLogo    = asset('static/images/logo.png');
+        $schemaPageName = trim($__env->yieldContent('schema_name', $__env->yieldContent('title', $schemaOrgName)));
+        $schemaPageDesc = trim($__env->yieldContent('schema_description', $__env->yieldContent('meta_description', '')));
+        $schemaPageUrl  = trim($__env->yieldContent('canonical', url()->current()));
+    @endphp
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "@id": @json($schemaOrgUrl . "#organization"),
+  "name": @json($schemaOrgName),
+  "url": @json($schemaOrgUrl),
+  "logo": {
+    "@type": "ImageObject",
+    "url": @json($schemaLogo)
+        },
+        "sameAs": [
+        @json("https://www.linkedin.com/company/devlints")
+        ]
+      }
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": @json($schemaOrgUrl . "#website"),
+  "url": @json($schemaOrgUrl),
+  "name": @json($schemaOrgName),
+  "publisher": { "@id": @json($schemaOrgUrl . "#organization") }
+}
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "@yield('schema_page_type', 'WebPage')",
+  "@id": @json($schemaPageUrl . "#webpage"),
+  "url": @json($schemaPageUrl),
+  "name": @json($schemaPageName),
+  "description": @json($schemaPageDesc),
+  "isPartOf": { "@id": @json($schemaOrgUrl . "#website") },
+  "about": { "@id": @json($schemaOrgUrl . "#organization") }
+}
+    </script>
+
+    @stack('structured_data')
+
+    @hasSection('structured_data')
+        @yield('structured_data')
+    @endif
+
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8X297200ZK"></script>
@@ -91,7 +181,7 @@
                                             src="{{ asset('static/images/services/app-dev-icon.svg') }}"
                                             alt=""> </a></div>
                                 <a href="{{route('mobile_app_development')}}" class="services-tittle"> <span>Mobile
-                      Developement</span> </a>
+                      Development</span> </a>
                             </div>
 
                             <div class="grid-item" onclick="window.location='{{ route('blockchain_development') }}'"
@@ -100,7 +190,7 @@
                                             src="{{ asset('static/images/services/blockchain-icon.svg') }}" alt=""> </a>
                                 </div>
                                 <a href="{{route('blockchain_development')}}" class="services-tittle"> <span>Block Chain
-                      Developement</span> </a>
+                      Development</span> </a>
                             </div>
 
                             <div class="grid-item" onclick="window.location='{{ route('ui_ux_development') }}'"
@@ -108,7 +198,7 @@
                                 <div class="img-div"><a href="{{route('ui_ux_development')}}"> <img
                                             src="{{ asset('static/images/services/ui-ux-icon.svg') }}" alt=""> </a>
                                 </div>
-                                <a href="{{route('ui_ux_development')}}" class="services-tittle"> <span>UI/UX Developement</span>
+                                <a href="{{route('ui_ux_development')}}" class="services-tittle"> <span>UI/UX Development</span>
                                 </a>
                             </div>
 
@@ -118,7 +208,7 @@
                                             src="{{ asset('static/images/services/ecommerce-icon.svg') }}" alt=""> </a>
                                 </div>
                                 <a href="{{route('ecommerce_development')}}" class="services-tittle"> <span>Ecommerce
-                      Developement</span> </a>
+                      Development</span> </a>
                             </div>
 
                             <div class="grid-item" onclick="window.location='{{ route('wordpress_development') }}'"
@@ -127,7 +217,7 @@
                                             src="{{ asset('static/images/services/wordpress-icon.svg') }}" alt=""> </a>
                                 </div>
                                 <a href="{{route('wordpress_development')}}" class="services-tittle"> <span>Wordpress
-                      Developement</span> </a>
+                      Development</span> </a>
                             </div>
 
                             <div class="grid-item" onclick="window.location='{{ route('digital_marketing') }}'"
@@ -154,7 +244,7 @@
                                             src="{{ asset('static/images/services/full-stack-developer-icon.svg') }}"
                                             alt=""> </a></div>
                                 <a href="{{route('full_stack_development')}}" class="services-tittle"> <span>Full Stack
-                      Developement</span> </a>
+                      Development</span> </a>
                             </div>
 
                             <div class="grid-item" onclick="window.location='{{ route('ai_development') }}'"
@@ -162,7 +252,7 @@
                                 <div class="img-div"><a href="{{route('ai_development')}}"> <img
                                             src="{{ asset('static/images/services/ai-icon.svg') }}" alt=""> </a></div>
                                 <a href="{{route('ai_development')}}" class="services-tittle">
-                                    <span>Ai Developement</span> </a>
+                                    <span>Ai Development</span> </a>
                             </div>
 
                             <div class="grid-item" onclick="window.location='{{ route('game_development') }}'"
@@ -171,7 +261,7 @@
                                             src="{{ asset('static/images/services/game-dev-icon.svg') }}" alt=""> </a>
                                 </div>
                                 <a href="{{route('game_development')}}" class="services-tittle">
-                                    <span>Game Developement</span> </a>
+                                    <span>Game Development</span> </a>
                             </div>
 
                             <div class="grid-item" onclick="window.location='{{ route('app_development') }}'"
@@ -179,7 +269,7 @@
                                 <div class="img-div"><a href="{{route('app_development')}}"> <img
                                             src="{{ asset('static/images/services/app-icon.svg') }}" alt=""> </a></div>
                                 <a href="{{route('app_development')}}" class="services-tittle">
-                                    <span>App Developement</span> </a>
+                                    <span>App Development</span> </a>
                             </div>
 
 
@@ -370,7 +460,7 @@
                 <span><img src="{{ asset('static/images/social-icons/twitter.png') }}" alt=""></span>
 
                 <a href="https://www.linkedin.com/company/devlints" target="_blank" rel="noopener noreferrer">
-                  <span> <img src="{{ asset('static/images/social-icons/linkedin.png') }}" alt="LinkedIn"> </span>
+                    <span> <img src="{{ asset('static/images/social-icons/linkedin.png') }}" alt="LinkedIn"> </span>
                 </a>
 
                 <span><img src="{{ asset('static/images/social-icons/github.png') }}" alt=""></span>
@@ -384,6 +474,7 @@
             <p><a href="{{route('contact_us')}}"> Contact us </a></p>
             <p><a href="#services"> Services </a></p>
             <p><a href="{{route('careers')}}"> Careers </a></p>
+            <p><a href="{{route('all_blogs')}}"> Blogs </a></p>
         </div>
 
 

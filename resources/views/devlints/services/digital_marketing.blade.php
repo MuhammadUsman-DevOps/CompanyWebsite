@@ -1,8 +1,80 @@
 @extends('layouts.master')
-@section('title') Digital Marketing Services @endsection
+@section('title', 'Digital Marketing Agency | SEO, PPC & Social Media – Devlints')
+
+@section('meta_description', 'Devlints is a digital marketing agency helping US/UK/EU businesses grow with SEO, PPC (Google Ads), social media, content marketing, email marketing, and conversion rate optimization (CRO).')
+
+@section('meta_keywords', 'digital marketing agency, digital marketing services, seo services, ppc management, google ads agency, social media marketing, content marketing services, email marketing, conversion rate optimization, cro services')
+
+@section('og_title', 'Result-Driven Digital Marketing Services | Devlints')
+@section('og_description', 'Grow traffic, leads, and revenue with Devlints — SEO, PPC, social media, content marketing, email marketing, and CRO for US/UK/EU businesses.')
+@section('og_image', asset('static/images/og/devlints-og.webp'))
+@section('og_url', url()->current())
+
+@section('twitter_title', 'Digital Marketing Services | Devlints')
+@section('twitter_description', 'SEO, Google Ads/PPC, social media, content, email marketing, and CRO — designed to drive measurable growth.')
+@section('twitter_image', asset('static/images/og/devlints-og.webp'))
+
+@section('canonical', url()->current())
+@section('robots', 'index, follow')
+
+@section('schema_name', 'Digital Marketing Services')
+@section('schema_description', 'Devlints provides digital marketing services including SEO, PPC/Google Ads, social media marketing, content marketing, email marketing, and conversion rate optimization (CRO).')
+
 @push('styles')
     <link rel="stylesheet" href="{{ asset('static/css/services.css') }}">
 @endpush
+
+@push('structured_data')
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"Service",
+          "name":"Digital Marketing Services",
+          "serviceType":"Digital Marketing",
+          "provider": { "@id":"{{ url('/') }}#organization" },
+  "url":"{{ url()->current() }}",
+  "areaServed":["United States","United Kingdom","Europe"],
+  "description":"Devlints provides digital marketing services including SEO, PPC/Google Ads, social media marketing, content marketing, email marketing, and conversion rate optimization (CRO)."
+}
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"FAQPage",
+          "mainEntity":[
+            {
+              "@type":"Question",
+              "name":"Do you provide SEO for long-term organic growth?",
+              "acceptedAnswer":{"@type":"Answer","text":"Yes. We handle technical SEO, on-page optimization, content strategy, and link-building approaches focused on sustainable rankings and traffic growth."}
+            },
+            {
+              "@type":"Question",
+              "name":"Do you manage Google Ads / PPC campaigns?",
+              "acceptedAnswer":{"@type":"Answer","text":"Yes. We set up and manage ROI-focused PPC campaigns, including keyword research, ad creatives, landing page feedback, conversion tracking, and ongoing optimization."}
+            },
+            {
+              "@type":"Question",
+              "name":"Can you improve conversion rate (CRO) on our landing pages?",
+              "acceptedAnswer":{"@type":"Answer","text":"Yes. We identify conversion blockers and implement improvements to messaging, UX, speed, and funnel tracking to increase leads and sales."}
+            }
+          ]
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"BreadcrumbList",
+          "itemListElement":[
+            {"@type":"ListItem","position":1,"name":"Home","item":"{{ url('/') }}"},
+    {"@type":"ListItem","position":2,"name":"Services","item":"{{ url('/services') }}"},
+    {"@type":"ListItem","position":3,"name":"Digital Marketing","item":"{{ url()->current() }}"}
+  ]
+}
+    </script>
+@endpush
+
 
 @section("content")
     <div class="section hero">

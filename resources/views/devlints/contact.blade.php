@@ -1,4 +1,62 @@
 @extends('layouts.master')
+@section('title', 'Contact Devlints | Get a Free Consultation for Your Project')
+
+@section('meta_description', 'Contact Devlints to discuss your web app, mobile app, SaaS, AI, or eCommerce project. Get a free consultation, project estimate, and a clear plan for delivery—serving US/UK/EU clients.')
+
+@section('meta_keywords', 'contact devlints, software development company contact, get a quote web development, mobile app development consultation, saas development quote, hire developers contact, free consultation')
+
+@section('og_title', 'Contact Devlints | Let’s Build Your Project')
+@section('og_description', 'Get in touch with Devlints for a free consultation and project estimate. We build web apps, mobile apps, SaaS platforms, and AI solutions for US/UK/EU clients.')
+@section('og_image', asset('static/images/og/devlints-og.webp'))
+@section('og_url', url()->current())
+
+@section('twitter_title', 'Contact Devlints')
+@section('twitter_description', 'Request a free consultation and project estimate. Web, mobile, SaaS, and AI development for US/UK/EU clients.')
+@section('twitter_image', asset('static/images/og/devlints-og.webp'))
+
+@section('canonical', url()->current())
+@section('robots', 'index, follow')
+
+@section('schema_name', 'Contact Us')
+@section('schema_description', 'Contact Devlints for a free consultation and quote. We build web apps, mobile apps, SaaS platforms, AI solutions, and eCommerce systems for global clients.')
+@push('structured_data')
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"ContactPage",
+          "name":"Contact Devlints",
+          "url":"{{ url()->current() }}",
+  "description":"Contact Devlints for a free consultation and quote for web apps, mobile apps, SaaS, AI, and eCommerce development.",
+  "isPartOf": { "@id":"{{ url('/') }}#website" },
+  "about": { "@id":"{{ url('/') }}#organization" }
+}
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"ContactPoint",
+          "contactType":"sales",
+          "email":"info@devlints.com",
+          "telephone":"+92 307 0861396",
+          "availableLanguage":["English"],
+          "areaServed":["United States","United Kingdom","Europe","Middle East","Pakistan"],
+          "url":"{{ url()->current() }}"
+}
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"BreadcrumbList",
+          "itemListElement":[
+            {"@type":"ListItem","position":1,"name":"Home","item":"{{ url('/') }}"},
+    {"@type":"ListItem","position":2,"name":"Contact Us","item":"{{ url()->current() }}"}
+  ]
+}
+    </script>
+@endpush
+
 @push('styles')
     <link rel="stylesheet" href="{{ asset('static/css/contact-us.css') }}">
 @endpush

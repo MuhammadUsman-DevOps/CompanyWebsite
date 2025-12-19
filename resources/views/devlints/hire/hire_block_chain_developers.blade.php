@@ -1,4 +1,87 @@
 @extends('layouts.master')
+@section('title', 'Hire Blockchain Developers | Smart Contracts, DeFi & Web3 – Devlints')
+
+@section('meta_description', 'Hire expert blockchain developers from Devlints for US/UK/EU projects—smart contracts (Solidity/Rust), DeFi apps, NFT marketplaces, DApps, wallet integrations, and audit-ready Web3 development.')
+
+@section('meta_keywords', 'hire blockchain developers, blockchain developers for hire, hire web3 developers, smart contract developers for hire, solidity developers for hire, rust blockchain developers, defi development, nft marketplace developers, dapp developers for hire')
+
+@section('og_title', 'Hire Expert Blockchain Developers | Devlints')
+@section('og_description', 'Dedicated blockchain developers for smart contracts, DeFi, NFT marketplaces, DApps, and wallet integrations—secure, scalable, and audit-ready.')
+@section('og_image', asset('static/images/og/devlints-og.webp'))
+@section('og_url', url()->current())
+
+@section('twitter_title', 'Hire Blockchain Developers | Devlints')
+@section('twitter_description', 'Web3 & blockchain developers for hire—Solidity/Rust smart contracts, DeFi, NFTs, DApps, and secure integrations.')
+@section('twitter_image', asset('static/images/og/devlints-og.webp'))
+
+@section('canonical', url()->current())
+@section('robots', 'index, follow')
+
+@section('schema_name', 'Hire Blockchain Developers')
+@section('schema_description', 'Hire dedicated blockchain developers from Devlints for smart contracts, DeFi, NFT marketplaces, DApps, and wallet integrations with flexible engagement models and offshore talent.')
+@push('structured_data')
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"WebPage",
+          "name":"Hire Blockchain Developers",
+          "url":"{{ url()->current() }}",
+  "description":"Hire dedicated blockchain developers from Devlints for smart contracts, DeFi, NFT marketplaces, DApps, and wallet integrations.",
+  "isPartOf": { "@id":"{{ url('/') }}#website" },
+  "about": { "@id":"{{ url('/') }}#organization" }
+}
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"Service",
+          "name":"Dedicated Blockchain Developers",
+          "serviceType":"Staffing / Dedicated Developers",
+          "provider": { "@id":"{{ url('/') }}#organization" },
+  "url":"{{ url()->current() }}",
+  "areaServed":["United States","United Kingdom","Europe"],
+  "description":"Dedicated blockchain developers for hire: Solidity/Rust smart contracts, DeFi platforms, NFT marketplaces, DApps, wallet integrations, and audit-ready code."
+}
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"FAQPage",
+          "mainEntity":[
+            {
+              "@type":"Question",
+              "name":"Can I hire blockchain developers for smart contracts and audits preparation?",
+              "acceptedAnswer":{"@type":"Answer","text":"Yes. We develop smart contracts (e.g., Solidity/Rust) following security best practices with testing and review workflows to help you prepare for audits."}
+            },
+            {
+              "@type":"Question",
+              "name":"Do you build DeFi apps, NFT marketplaces, and DApps?",
+              "acceptedAnswer":{"@type":"Answer","text":"Yes. We build DeFi platforms, NFT marketplaces, DApps, and wallet integrations depending on your chain, product scope, and security requirements."}
+            },
+            {
+              "@type":"Question",
+              "name":"What engagement models do you offer?",
+              "acceptedAnswer":{"@type":"Answer","text":"We offer flexible engagement models including full-time, part-time, and project-based hiring with timezone overlap for US/UK/EU teams."}
+            }
+          ]
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"BreadcrumbList",
+          "itemListElement":[
+            {"@type":"ListItem","position":1,"name":"Home","item":"{{ url('/') }}"},
+    {"@type":"ListItem","position":2,"name":"Hire Developers","item":"{{ url('/hire') }}"},
+    {"@type":"ListItem","position":3,"name":"Hire Blockchain Developers","item":"{{ url()->current() }}"}
+  ]
+}
+    </script>
+@endpush
+
 @push('styles')
     <link rel="stylesheet" href="{{ asset('static/css/hire-talent.css') }}">
     <link rel="stylesheet" href="{{ asset('static/css/services.css') }}">
@@ -39,7 +122,7 @@
 
     <div class="section why-hire">
         <div class="container">
-            <h1>Why Hire Blockchain Developers from Devlints?</h1>
+            <h2>Why Hire Blockchain Developers from Devlints?</h2>
             <div class="why-hire-grid">
                 <div class="why-hire-card">
                     <h3>Blockchain Expertise</h3>
@@ -71,7 +154,7 @@
 
     <div class="section tech-section">
         <div class="container">
-            <h1>Technologies We Use for Blockchain Development</h1>
+            <h2>Technologies We Use for Blockchain Development</h2>
             <p class="tech-para">We work with leading blockchain platforms, smart contract languages, and tools to build decentralized applications that are future-ready.</p>
             <div class="tech-categories">
                 <div class="tech-category" data-category="platforms">Platforms</div>
@@ -84,7 +167,7 @@
 
     <div class="section offshore-section">
         <div class="container">
-            <h1>Why Hire Offshore Blockchain Developers?</h1>
+            <h2>Why Hire Offshore Blockchain Developers?</h2>
             <p>Hiring offshore blockchain developers allows you to access global talent, reduce operational costs, and scale efficiently. Here’s why businesses choose Devlints:</p>
             <div class="offshore-grid">
                 <div class="offshore-card">

@@ -1,5 +1,77 @@
 @extends('layouts.master')
-@section('title') Game Development Services @endsection
+@section('title', 'Game Development Company | Unity, Unreal, AR/VR & Multiplayer – Devlints')
+
+@section('meta_description', 'Devlints is a game development company building immersive 2D/3D games for mobile, PC, and web—Unity/Unreal development, multiplayer systems, AR/VR experiences, and game UI/UX for US/UK/EU clients.')
+
+@section('meta_keywords', 'game development company, game development services, unity game development, unreal game development, mobile game development, multiplayer game development, ar vr game development, 2d game development, 3d game development, game ui ux')
+
+@section('og_title', 'Game Development Services | Unity, Unreal & AR/VR – Devlints')
+@section('og_description', 'Build engaging games with Devlints — 2D/3D, mobile & cross-platform, multiplayer, and AR/VR experiences using Unity and Unreal for US/UK/EU clients.')
+@section('og_image', asset('static/images/og/devlints-og.webp'))
+@section('og_url', url()->current())
+
+@section('twitter_title', 'Game Development Services | Devlints')
+@section('twitter_description', '2D/3D games, multiplayer, and AR/VR experiences—built with Unity/Unreal for performance, scale, and player engagement.')
+@section('twitter_image', asset('static/images/og/devlints-og.webp'))
+
+@section('canonical', url()->current())
+@section('robots', 'index, follow')
+
+{{-- Optional: used by global WebPage schema in master --}}
+@section('schema_name', 'Game Development Services')
+@section('schema_description', 'Devlints provides game development services including 2D/3D games, cross-platform mobile games, multiplayer systems, AR/VR experiences, and Unity/Unreal development for US/UK/EU clients.')
+
+@push('structured_data')
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"Service",
+          "name":"Game Development Services",
+          "serviceType":"Game Development",
+          "provider": { "@id":"{{ url('/') }}#organization" },
+  "url":"{{ url()->current() }}",
+  "areaServed":["United States","United Kingdom","Europe"],
+  "description":"Devlints provides game development services including 2D/3D games, cross-platform mobile games, multiplayer systems, AR/VR experiences, and Unity/Unreal development."
+}
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"FAQPage",
+          "mainEntity":[
+            {
+              "@type":"Question",
+              "name":"Do you develop games with Unity or Unreal Engine?",
+              "acceptedAnswer":{"@type":"Answer","text":"Yes. We build games using Unity and Unreal depending on your target platforms, performance needs, and feature requirements."}
+            },
+            {
+              "@type":"Question",
+              "name":"Can you build multiplayer games and real-time features?",
+              "acceptedAnswer":{"@type":"Answer","text":"Yes. We implement multiplayer systems and real-time features such as matchmaking, leaderboards, and live game state synchronization based on your game design."}
+            },
+            {
+              "@type":"Question",
+              "name":"Do you develop AR/VR game experiences?",
+              "acceptedAnswer":{"@type":"Answer","text":"Yes. We build AR/VR experiences and interactive applications depending on your target devices and content requirements."}
+            }
+          ]
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"BreadcrumbList",
+          "itemListElement":[
+            {"@type":"ListItem","position":1,"name":"Home","item":"{{ url('/') }}"},
+    {"@type":"ListItem","position":2,"name":"Services","item":"{{ url('/services') }}"},
+    {"@type":"ListItem","position":3,"name":"Game Development","item":"{{ url()->current() }}"}
+  ]
+}
+    </script>
+@endpush
+
 @push('styles')
     <link rel="stylesheet" href="{{ asset('static/css/services.css') }}">
 @endpush
@@ -42,7 +114,7 @@
 
     <div class="section tech-section">
         <div class="container">
-            <h1>Technologies We Use in Game Development</h1>
+            <h2>Technologies We Use in Game Development</h2>
             <p>We use industry-standard game engines, libraries, and design tools to build games that are performant, immersive, and user-centric.</p>
             <div class="tech-categories">
                 <div class="tech-category" data-category="gameDevStack">Game Development Tools</div>
@@ -54,7 +126,7 @@
 
     <div class="section">
         <div class="container">
-            <h1>Our Game Development Services</h1>
+            <h2>Our Game Development Services</h2>
             <div class="services-grid">
                 <div class="service-item">Mobile Game Development</div>
                 <div class="service-item">PC & Console Game Development</div>
@@ -68,7 +140,7 @@
 
     <div class="section niches-section">
         <div class="container">
-            <h1>Game Solutions for All Genres</h1>
+            <h2>Game Solutions for All Genres</h2>
             <p>We develop high-quality games across genres—from hyper-casual mobile games to complex open-world adventures—customized for your vision and target audience.</p>
             <a href="{{ route('contact_us') }}" class="btn">Get 24/7 Support</a>
             <div class="niches-grid">

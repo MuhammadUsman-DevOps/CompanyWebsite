@@ -1,5 +1,76 @@
 @extends('layouts.master')
-@section('title') App Development Services @endsection
+@section('title', 'iOS & Android App Development Company | Native & Cross-Platform – Devlints')
+
+@section('meta_description', 'Devlints builds high-performance iOS and Android apps for US/UK/EU clients—native (Swift/Kotlin) and cross-platform (Flutter/React Native) development, UI/UX design, ASO, and maintenance.')
+
+@section('meta_keywords', 'ios app development company, android app development company, ios and android app development, native app development, swift developers, kotlin developers, flutter app development, react native app development, mobile app ui ux, app maintenance')
+
+@section('og_title', 'iOS & Android App Development Services | Devlints')
+@section('og_description', 'Build native iOS/Android apps or cross-platform apps with Devlints — Swift/Kotlin, Flutter/React Native, UI/UX, ASO, and support for US/UK/EU clients.')
+@section('og_image', asset('static/images/og/devlints-og.webp'))
+@section('og_url', url()->current())
+
+@section('twitter_title', 'iOS & Android App Development | Devlints')
+@section('twitter_description', 'Native + cross-platform app development: Swift/Kotlin, Flutter/React Native, UI/UX, ASO, and long-term maintenance.')
+@section('twitter_image', asset('static/images/og/devlints-og.webp'))
+
+@section('canonical', url()->current())
+@section('robots', 'index, follow')
+
+
+@section('schema_name', 'iOS & Android App Development Services')
+@section('schema_description', 'Devlints builds native iOS and Android apps and cross-platform apps (Flutter/React Native) including UI/UX design, ASO, and ongoing maintenance for US/UK/EU clients.')
+@push('structured_data')
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"Service",
+          "name":"iOS & Android App Development Services",
+          "serviceType":"Mobile App Development",
+          "provider": { "@id":"{{ url('/') }}#organization" },
+  "url":"{{ url()->current() }}",
+  "areaServed":["United States","United Kingdom","Europe"],
+  "description":"Devlints provides iOS and Android app development services including native development (Swift/Kotlin), cross-platform apps (Flutter/React Native), UI/UX design, ASO, and maintenance."
+}
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"FAQPage",
+          "mainEntity":[
+            {
+              "@type":"Question",
+              "name":"Do you build native iOS and Android apps?",
+              "acceptedAnswer":{"@type":"Answer","text":"Yes. We build native iOS apps (Swift) and Android apps (Kotlin/Java) optimized for performance, reliability, and app store guidelines."}
+            },
+            {
+              "@type":"Question",
+              "name":"Do you build cross-platform apps with Flutter or React Native?",
+              "acceptedAnswer":{"@type":"Answer","text":"Yes. We build cross-platform apps using Flutter and React Native for faster delivery while maintaining a consistent experience across devices."}
+            },
+            {
+              "@type":"Question",
+              "name":"Do you provide post-launch support and app maintenance?",
+              "acceptedAnswer":{"@type":"Answer","text":"Yes. We provide ongoing maintenance, OS compatibility updates, performance improvements, and feature iterations after launch."}
+            }
+          ]
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"BreadcrumbList",
+          "itemListElement":[
+            {"@type":"ListItem","position":1,"name":"Home","item":"{{ url('/') }}"},
+    {"@type":"ListItem","position":2,"name":"Services","item":"{{ url('/services') }}"},
+    {"@type":"ListItem","position":3,"name":"iOS & Android App Development","item":"{{ url()->current() }}"}
+  ]
+}
+    </script>
+@endpush
+
 @push('styles')
     <link rel="stylesheet" href="{{ asset('static/css/services.css') }}">
 @endpush
@@ -42,7 +113,7 @@
 
     <div class="section tech-section">
         <div class="container">
-            <h1>Technologies We Use in App Development</h1>
+            <h2>Technologies We Use in App Development</h2>
             <p>We use cutting-edge technologies and mobile frameworks to build future-ready apps that perform under scale.</p>
             <div class="tech-categories">
                 <div class="tech-category" data-category="appDevStack">App Development Stack</div>
@@ -54,7 +125,7 @@
 
     <div class="section">
         <div class="container">
-            <h1>Our Mobile App Development Services</h1>
+            <h2>Our Mobile App Development Services</h2>
             <div class="services-grid">
                 <div class="service-item">iOS App Development</div>
                 <div class="service-item">Android App Development</div>
@@ -68,7 +139,7 @@
 
     <div class="section niches-section">
         <div class="container">
-            <h1>App Development for All Industries</h1>
+            <h2>App Development for All Industries</h2>
             <p>We develop custom mobile apps tailored to various industries — empowering businesses with innovative mobile experiences.</p>
             <a href="{{ route('contact_us') }}" class="btn">Get 24/7 Support</a>
             <div class="niches-grid">

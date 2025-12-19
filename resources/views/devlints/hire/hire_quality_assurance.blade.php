@@ -1,4 +1,87 @@
 @extends('layouts.master')
+@section('title', 'Hire QA Engineers | Manual & Automation Testers – Devlints')
+
+@section('meta_description', 'Hire QA engineers from Devlints for US/UK/EU projects—manual testing, automation (Selenium), web/mobile/API testing, regression, cross-browser testing, and test documentation. Flexible hiring models and fast onboarding.')
+
+@section('meta_keywords', 'hire qa engineers, qa testers for hire, software testing services, manual testing, automation testing, selenium automation engineer, api testing, mobile app testing, cross browser testing, regression testing, istqb qa')
+
+@section('og_title', 'Hire Quality Assurance (QA) Engineers | Devlints')
+@section('og_description', 'Dedicated QA engineers for hire—manual + automation testing, web/mobile/API coverage, regression, cross-browser testing, and clear bug reporting.')
+@section('og_image', asset('static/images/og/devlints-og.webp'))
+@section('og_url', url()->current())
+
+@section('twitter_title', 'Hire QA Engineers | Devlints')
+@section('twitter_description', 'Manual + automated testing experts for hire—faster releases, fewer bugs, and reliable test reporting across web and mobile.')
+@section('twitter_image', asset('static/images/og/devlints-og.webp'))
+
+@section('canonical', url()->current())
+@section('robots', 'index, follow')
+
+@section('schema_name', 'Hire QA Engineers')
+@section('schema_description', 'Hire dedicated QA engineers from Devlints for manual and automation testing across web, mobile, and APIs—regression, cross-browser testing, documentation, and full-cycle QA support.')
+@push('structured_data')
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"WebPage",
+          "name":"Hire QA Engineers",
+          "url":"{{ url()->current() }}",
+  "description":"Hire dedicated QA engineers from Devlints for manual and automation testing, web/mobile/API coverage, and full-cycle QA support.",
+  "isPartOf": { "@id":"{{ url('/') }}#website" },
+  "about": { "@id":"{{ url('/') }}#organization" }
+}
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"Service",
+          "name":"Dedicated QA Engineers",
+          "serviceType":"Staffing / Dedicated QA",
+          "provider": { "@id":"{{ url('/') }}#organization" },
+  "url":"{{ url()->current() }}",
+  "areaServed":["United States","United Kingdom","Europe"],
+  "description":"Dedicated QA engineers for hire: manual testing, automation testing, web/mobile/API testing, cross-browser testing, regression, and test documentation."
+}
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"FAQPage",
+          "mainEntity":[
+            {
+              "@type":"Question",
+              "name":"Can I hire QA engineers for manual testing and automation testing?",
+              "acceptedAnswer":{"@type":"Answer","text":"Yes. We provide QA engineers for both manual testing and automation testing (e.g., Selenium-based) depending on your product and release cadence."}
+            },
+            {
+              "@type":"Question",
+              "name":"Do you test web apps, mobile apps, and APIs?",
+              "acceptedAnswer":{"@type":"Answer","text":"Yes. We cover web, mobile, and API testing including functional testing, regression, and cross-browser/cross-device validation."}
+            },
+            {
+              "@type":"Question",
+              "name":"Do you provide test cases, reports, and bug tracking workflows?",
+              "acceptedAnswer":{"@type":"Answer","text":"Yes. We create test plans and test cases, provide clear bug reports, and collaborate using tools like JIRA/TestRail/GitHub based on your workflow."}
+            }
+          ]
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"BreadcrumbList",
+          "itemListElement":[
+            {"@type":"ListItem","position":1,"name":"Home","item":"{{ url('/') }}"},
+    {"@type":"ListItem","position":2,"name":"Hire Talent","item":"{{ url('/hire') }}"},
+    {"@type":"ListItem","position":3,"name":"Hire QA Engineers","item":"{{ url()->current() }}"}
+  ]
+}
+    </script>
+@endpush
+
 @push('styles')
     <link rel="stylesheet" href="{{ asset('static/css/hire-talent.css') }}">
     <link rel="stylesheet" href="{{ asset('static/css/services.css') }}">
@@ -38,7 +121,7 @@
 
     <div class="section why-hire">
         <div class="container">
-            <h1>Why Hire QA Engineers from Devlints?</h1>
+            <h2>Why Hire QA Engineers from Devlints?</h2>
             <div class="why-hire-grid">
                 <div class="why-hire-card">
                     <h3>Certified QA Professionals</h3>
@@ -70,7 +153,7 @@
 
     <div class="section tech-section">
         <div class="container">
-            <h1>QA Tools & Technologies We Use</h1>
+            <h2>QA Tools & Technologies We Use</h2>
             <p class="tech-para">Our QA engineers use modern testing tools and frameworks to ensure high accuracy, scalability, and efficiency in every project.</p>
             <div class="tech-categories">
                 <div class="tech-category" data-category="qaTestingStack">QA Testing Tools</div>
@@ -82,7 +165,7 @@
 
     <div class="section offshore-section">
         <div class="container">
-            <h1>Why Hire Offshore QA Engineers?</h1>
+            <h2>Why Hire Offshore QA Engineers?</h2>
             <p>Hiring offshore QA engineers from Devlints helps you cut costs, accelerate releases, and ensure product quality at every stage. Here’s how:</p>
             <div class="offshore-grid">
                 <div class="offshore-card">

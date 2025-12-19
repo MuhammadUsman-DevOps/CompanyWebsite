@@ -1,9 +1,79 @@
 @extends('layouts.master')
-@section('title') Web Application Development @endsection
 @push('styles')
     <link rel="stylesheet" href="{{ asset('static/css/services.css') }}">
 @endpush
 
+@section('title', 'Web App Development Company | Custom Web Applications – Devlints')
+
+@section('meta_description', 'Devlints is a web app development company building scalable, secure custom web applications for US/UK/EU clients—dashboards, portals, SaaS platforms, and API integrations.')
+
+@section('meta_keywords', 'web app development company, web application development services, custom web application development, admin dashboard development, customer portal development, saas web app development, b2b web app development')
+
+@section('og_title', 'Custom Web Application Development Services | Devlints')
+@section('og_description', 'Build scalable web applications with Devlints — dashboards, portals, SaaS platforms, and API integrations for US/UK/EU clients.')
+@section('og_image', asset('static/images/og/devlints-og.webp'))
+@section('og_url', url()->current())
+
+@section('twitter_title', 'Web App Development Company | Devlints')
+@section('twitter_description', 'Custom web apps built for performance, security, and scale — dashboards, portals, SaaS, and integrations.')
+@section('twitter_image', asset('static/images/og/devlints-og.webp'))
+
+@section('canonical', url()->current())
+@section('robots', 'index, follow')
+
+@section('schema_name', 'Web App Development Services')
+@section('schema_description', 'Devlints builds scalable, secure custom web applications for US/UK/EU clients including dashboards, portals, SaaS platforms, and API integrations.')
+
+@push('structured_data')
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"Service",
+          "name":"Web Application Development Services",
+          "serviceType":"Custom Web Application Development",
+          "provider": { "@id":"{{ url('/') }}#organization" },
+  "url":"{{ url()->current() }}",
+  "areaServed":["United States","United Kingdom","Europe"],
+  "description":"Devlints builds scalable, secure custom web applications including dashboards, portals, SaaS platforms, and API integrations."
+}
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"FAQPage",
+          "mainEntity":[
+            {
+              "@type":"Question",
+              "name":"How much does a custom web application cost?",
+              "acceptedAnswer":{"@type":"Answer","text":"Cost depends on roles/permissions, integrations, workflows, and complexity. After a short discovery call, we provide a milestone-based estimate."}
+            },
+            {
+              "@type":"Question",
+              "name":"Can you build SaaS web apps with subscriptions?",
+              "acceptedAnswer":{"@type":"Answer","text":"Yes — multi-tenant SaaS platforms with Stripe billing, trials, invoices, teams/RBAC, and admin panels."}
+            },
+            {
+              "@type":"Question",
+              "name":"Do you take over and improve an existing web app?",
+              "acceptedAnswer":{"@type":"Answer","text":"Yes — we can audit, stabilize, refactor, improve performance/security, and ship features without breaking production."}
+            }
+          ]
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"BreadcrumbList",
+          "itemListElement":[
+            {"@type":"ListItem","position":1,"name":"Home","item":"{{ url('/') }}"},
+    {"@type":"ListItem","position":2,"name":"Services","item":"{{ url('/services') }}"},
+    {"@type":"ListItem","position":3,"name":"Web App Development","item":"{{ url()->current() }}"}
+  ]
+}
+    </script>
+@endpush
 @section("content")
     <div class="section hero">
         <div class="container">
@@ -48,7 +118,7 @@
     </div>
     <div class="section tech-section">
         <div class="container">
-            <h1>Technologies We Work With</h1>
+            <h2>Technologies We Work With</h2>
             <p>We check out complete programming languages, databases, platforms, and cloud systems to complete projects.</p>
             <div class="tech-categories">
                 <div class="tech-category" data-category="frontend">Frontend</div>
@@ -62,7 +132,7 @@
 
     <div class="section">
         <div class="container">
-            <h1>Web Development Services</h1>
+            <h2>Web Development Services</h2>
             <div class="services-grid">
                 <div class="service-item">Custom Application</div>
                 <div class="service-item">E-Commerce Development</div>
@@ -76,7 +146,7 @@
 
     <div class="section niches-section">
         <div class="container">
-            <h1>We Build Web Development App Solutions For All The Niches</h1>
+            <h2>We Build Web Development App Solutions For All The Niches</h2>
             <p>No matter which niche your project falls into, with the help of our experienced Web App developers, we can
                 deliver you with robust Web App solutions.</p>
             <a href="#" class="btn">Get 24/7 Support</a>

@@ -1,2 +1,27 @@
 User-agent: *
-Disallow:
+Allow: /
+
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /login
+Disallow: /register
+Disallow: /password/
+Disallow: /forgot-password
+Disallow: /reset-password
+Disallow: /email/
+Disallow: /verify-email
+Disallow: /logout
+Disallow: /api/
+Disallow: /storage/
+Disallow: /vendor/
+Disallow: /_debugbar/
+Disallow: /telescope/
+Disallow: /horizon/
+Disallow: /nova/
+Disallow: /sanctum/
+Disallow: /livewire/
+
+Disallow: /*?*
+
+Sitemap: https://devlints.com/sitemap.xml
+
