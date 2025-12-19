@@ -48,6 +48,9 @@ class SitemapController extends Controller
 
     public function index(): Response
     {
+        Cache::forget('sitemap:index');
+        Cache::forget('sitemap:blogs');
+
         return Cache::remember('sitemap:index', now()->addHours(6), function () {
 
             $base = "https://devlints.com";
@@ -71,6 +74,9 @@ class SitemapController extends Controller
 
     public function pages(): Response
     {
+        Cache::forget('sitemap:index');
+        Cache::forget('sitemap:blogs');
+
         return Cache::remember('sitemap:pages', now()->addHours(12), function () {
             $base = "https://devlints.com";
             $now  = now();
@@ -148,6 +154,9 @@ class SitemapController extends Controller
 
     public function blogs(): Response
     {
+        Cache::forget('sitemap:index');
+        Cache::forget('sitemap:blogs');
+
         return Cache::remember('sitemap:blogs', now()->addHours(6), function () {
             $base = "https://devlints.com";
 
