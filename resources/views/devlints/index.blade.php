@@ -257,7 +257,7 @@
     <!-- Product Section -->
     <section class="product-section">
         <div>
-            <h2 class="section-heading"> Products</h2>
+            <h2 class="section-heading"> Solutions</h2>
             <p class="section-para"> Our dedicated and skilled team ensure the delivery of effective,
                 top-quality software solutions</p>
         </div>
