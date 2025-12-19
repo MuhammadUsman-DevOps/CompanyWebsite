@@ -49,8 +49,8 @@ class SitemapController extends Controller
     public function index(): Response
     {
         return Cache::remember('sitemap:index', now()->addHours(6), function () {
-            $base = rtrim(config('app.url'), '/');
 
+            $base = "https://devlints.com";
             $lastBlog = Blog::query()
                 ->whereNotNull('published_at')
                 ->orderByDesc('updated_at')
@@ -72,7 +72,7 @@ class SitemapController extends Controller
     public function pages(): Response
     {
         return Cache::remember('sitemap:pages', now()->addHours(12), function () {
-            $base = rtrim(config('app.url'), '/');
+            $base = "https://devlints.com";
             $now  = now();
 
             // ✅ Add/adjust these to match your real URLs
@@ -149,7 +149,7 @@ class SitemapController extends Controller
     public function blogs(): Response
     {
         return Cache::remember('sitemap:blogs', now()->addHours(6), function () {
-            $base = rtrim(config('app.url'), '/');
+            $base = "https://devlints.com";
 
             $xml  = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
             $xml .= "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n";
