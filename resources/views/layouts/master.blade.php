@@ -5,14 +5,24 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <link rel="icon" href="{{ asset('static/images/favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('static/favicons/favicon.ico') }}" sizes="any">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('static/favicons/favicon-16x16.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('static/favicons/favicon-32x32.png') }}">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('static/favicons/apple-touch-icon.png') }}">
+
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('static/favicons/android-chrome-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="512x512" href="{{ asset('static/favicons/android-chrome-512x512.png') }}">
+
+    <link rel="manifest" href="{{ asset('site.webmanifest') }}">
+    <meta name="theme-color" content="#ffffff">
 
     {{-- Title --}}
-    <title>@yield('title', 'Devlints – Delivering Custom Software with Agile Processes and Expert Talent')</title>
+    <title>@yield('title', 'Devlints – Delivering Custom Software with Agile Processes')</title>
 
     {{-- Basic SEO --}}
     <meta name="description"
-          content="@yield('meta_description', 'Devlints builds scalable web apps, mobile apps, and SaaS platforms for US/UK/EU clients — fast delivery, clean architecture, and reliable long-term support.')">
+          content="@yield('meta_description', 'Devlints builds scalable web apps, mobile apps, and SaaS platforms. We believe in fast delivery, clean architecture, and reliable long-term support.')">
     <meta name="keywords"
           content="@yield('meta_keywords', 'web app development, mobile app development, saas development, full stack development, custom software development, devlints')">
 
