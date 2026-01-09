@@ -14,6 +14,7 @@ class Subscription extends Model
     protected $keyType = 'string';
 
     protected $fillable = [
+        'customer_product_id',
         'customer_id',
         'plan_id',
         'paddle_subscription_id',
@@ -30,6 +31,11 @@ class Subscription extends Model
     ];
 
     // Relationships
+    public function customerProduct()
+    {
+        return $this->belongsTo(CustomerProduct::class);
+    }
+
     public function customer()
     {
         return $this->belongsTo(Customer::class);

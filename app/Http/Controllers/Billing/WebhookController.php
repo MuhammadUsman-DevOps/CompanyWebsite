@@ -56,11 +56,14 @@ class WebhookController extends Controller
         // ✅ Attach Customer to Product via pivot (if not already attached)
         $customer->products()->syncWithoutDetaching([$product->id]);
 
-        // ✅ Get the pivot (customer_product) record
-        $customerProduct = $customer->products()
+        // ✅ Get the CustomerProduct pivot record
+        $customerProduct = \App\Models\CustomerProduct::where('customer_id', $customer->id)
             ->where('product_id', $product->id)
-            ->first()
-            ->pivot; // this gives the pivot row (customer_product)
+            ->first();
+
+        if (!$customerProduct) {
+            return response()->json(['message' => 'CustomerProduct relationship not found'], Response::HTTP_NOT_FOUND);
+        }
 
         // ✅ Calculate valid_until
         $validUntil = null;
@@ -74,19 +77,19 @@ class WebhookController extends Controller
             // if interval === 'one_time', keep null (no expiry)
         }
 
-        // ✅ Create Subscription (linked to pivot instead of customer_id directly)
+        // ✅ Create or update Subscription (linked to customer-product relationship)
         $subscription = Subscription::updateOrCreate(
             [
                 'customer_product_id' => $customerProduct->id,
                 'plan_id'             => $plan->id,
             ],
             [
-                'paddle_subscription_id' => $data['invoice_id'],
+                'customer_id'            => $customer->id,
+                'paddle_subscription_id' => $data['subscription_id'] ?? null,
                 'status'                 => 'active',
                 'valid_until'            => $validUntil,
                 'credits_remaining'      => $plan->credits_per_cycle ?? null,
                 'credits_reset_at'       => null,
-                'customer_id'            => $customer->id,
             ]
         );
 
