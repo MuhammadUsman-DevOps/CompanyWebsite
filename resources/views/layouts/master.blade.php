@@ -291,52 +291,29 @@
                 <!-- products hiring dropdown -->
 
                 <li id="product-menu">
-                    <div> Products</div>
-                    <img src="{{ asset('static/images/down-arrow.png') }}" class="arrow" alt="">
-                    <div class="products-dropdown-menu">
-                        <div class="products-grid">
-                            <div class="product-grid-item" onclick="window.open('https://zaayve.com', '_blank')">
-                                <div class="product-img-div"><img src="{{ asset('static/images/products/zaayve.png') }}"
-                                                                  alt="Product 1"></div>
-                                <div class="product-info">
-                                    <div class="product-name"><a href=" https://zaayve.com" target="_blank"> Zaayve
-                                            AI </a></div>
-                                    <div class="product-description">Productivity Across Every Domain</div>
-                                </div>
-                            </div>
-                            <div class="product-grid-item" onclick="window.open('https://whatsapptopdf.com', '_blank')">
-                                <div class="product-img-div"><img
-                                        src="{{ asset('static/images/products/whatsappToPdf.webp') }}"
-                                        alt="Product 2"></div>
-                                <div class="product-info">
-                                    <div class="product-name"><a href="https://whatsapptopdf.com" target="_blank">
-                                            WhatsApp To PDF </a></div>
-                                    <div class="product-description"> Whatsapp chats to pdf, easy.</div>
-                                </div>
-                            </div>
-                            <div class="product-grid-item" onclick="window.open('https://multcleaner.com/', '_blank')">
-                                <div class="product-img-div"><img
-                                        src="{{ asset('static/images/products/gmailCleaner.png') }}"
-                                        alt="Product 3"></div>
-                                <div class="product-info">
-                                    <div class="product-name"><a href="https://multcleaner.com/" target="_blank"> Multi
-                                            Cleaner </a></div>
-                                    <div class="product-description">Efficient gmail cleaner tool.</div>
-                                </div>
-                            </div>
-                            <div class="product-grid-item" onclick="window.open('https://orderconnects.com', '_blank')">
-                                <div class="product-img-div"><img
-                                        src="{{ asset('static/images/products/order-connects.png') }}"
-                                        alt="Product 4"></div>
-                                <div class="product-info">
-                                    <div class="product-name"><a href="https://orderconnects.com" target="_blank">Order
-                                            Connects </a></div>
-                                    <div class="product-description">Helping the restaurant community thrive.</div>
-                                </div>
-                            </div>
-                        </div>
+    <div>Products</div>
+    <img src="{{ asset('static/images/down-arrow.png') }}" class="arrow" alt="">
+    <div class="products-dropdown-menu">
+        <div class="products-grid">
+            @foreach($nav_products as $product)
+                <div class="product-grid-item" onclick="window.open('{{ $product->website_url }}', '_blank')">
+                    <div class="product-img-div">
+                        <img src="{{ asset('storage/' . $product->logo) }}" alt="{{ $product->name }}">
                     </div>
-                </li>
+                    <div class="product-info">
+                        <div class="product-name">
+                            <a href="{{ $product->website_url }}" target="_blank">
+                                {{ $product->name }}
+                            </a>
+                        </div>
+                        <div class="product-description">
+                            {{ $product->tagline }} </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+</li>
 
                 <li id="hire-talent-menu">
                     <div>Hire Talent</div>

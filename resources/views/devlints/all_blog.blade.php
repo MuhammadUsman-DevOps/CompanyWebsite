@@ -104,7 +104,6 @@
             padding: 120px 20px;
             display: flex;
             flex-direction: column;
-            row-gap: 40px;
             overflow: hidden;
 
         }
@@ -213,9 +212,7 @@
 @section('content')
 
     <div class="all-blog-container">
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Search blogs by title..." oninput="searchBlogs()">
-        </div>
+      
 
         <div class="filter-pills">
         <a href="{{ route('all_blogs', ['product' => 'all']) }}" 
@@ -248,17 +245,7 @@
 
 @push('scripts')
 
-    <script>
-        function searchBlogs() {
-            const input = document.getElementById('searchInput').value.toLowerCase();
-            const posts = document.querySelectorAll('.blog-post');
-
-            posts.forEach(post => {
-                const title = post.getAttribute('data-title').toLowerCase();
-                post.classList.toggle('hidden', !title.includes(input));
-            });
-        }
-    </script>
+   
 
 @endpush
 
