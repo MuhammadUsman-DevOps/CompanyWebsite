@@ -69,7 +69,28 @@
 @push('styles')
 
     <style>
+        .filter-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
 
+.pill {
+    padding: 8px 20px;
+    border-radius: 50px;
+    border: 1px solid #007bff;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.pill:hover, .pill.active {
+    background-color: #007bff;
+    color: white;
+}
 
         body{
             background: linear-gradient(135deg, #e0f2fe 0%, #f5f7fa 100%);
@@ -196,7 +217,19 @@
             <input type="text" id="searchInput" placeholder="Search blogs by title..." oninput="searchBlogs()">
         </div>
 
-
+        <div class="filter-pills">
+        <a href="{{ route('all_blogs', ['product' => 'all']) }}" 
+           class="pill {{ request('product') == 'all' || !request('product') ? 'active' : '' }}">
+           All Blogs
+        </a>
+        
+        @foreach($products as $product)
+            <a href="{{ route('all_blogs', ['product' => $product->id]) }}" 
+               class="pill {{ request('product') == $product->id ? 'active' : '' }}">
+               {{ $product->name }}
+            </a>
+        @endforeach
+    </div>
         <div class="blog-list" id="blogList">
 
             @foreach($blogs as $blog)

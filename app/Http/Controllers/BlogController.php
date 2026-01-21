@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -16,14 +17,31 @@ class BlogController extends Controller
     }
 
 
-    public function allBlogView(Request $request){
+    // public function allBlogView(Request $request){
 
-        $blogs = Blog::where('status', 'published')
-            // ->whereNull('product_id')
-            ->get();
+    //     $blogs = Blog::where('status', 'published')
+    //         // ->whereNull('product_id')
+    //         ->get();
 
-        return view('devlints.all_blog', compact('blogs'));
+    //     return view('devlints.all_blog', compact('blogs'));
+    // }
+
+    public function allBlogView(Request $request)
+{
+    $query = Blog::where('status', 'published');
+
+    // Filter by product ID if the parameter exists in the URL
+    if ($request->has('product') && $request->product !== 'all') {
+        $query->where('product_id', $request->product);
     }
+
+    $blogs = $query->get();
+    
+    // Fetch all active products to display as pills
+    $products = Product::where('is_active', true)->get();
+
+    return view('devlints.all_blog', compact('blogs', 'products'));
+}
 
 
     /**
