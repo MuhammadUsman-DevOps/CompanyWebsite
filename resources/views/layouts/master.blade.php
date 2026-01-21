@@ -307,7 +307,7 @@
                             </a>
                         </div>
                         <div class="product-description">
-                            {{ $product->tagline }} </div>
+                            {{ $product->description }} </div>
                     </div>
                 </div>
             @endforeach

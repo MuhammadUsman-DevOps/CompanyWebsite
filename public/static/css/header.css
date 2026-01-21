@@ -549,17 +549,23 @@ div a img {
     height: 50px;
     margin-right: 15px;
     border: 1px solid #cac6c6;
-    border-radius: 100%;
-    padding: 10px;
+    border-radius: 100%; /* Keeps the container circular */
+    padding: 8px;        /* Acts as a safety zone so logo doesn't touch the borders */
+    display: flex;       /* Centers the logo inside the circle */
+    align-items: center;
+    justify-content: center;
+    background-color: #fff; 
+    overflow: hidden;    /* Ensures nothing leaks outside the circle */
 }
 
 .product-img-div img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-radius: 4px;
+    /* CHANGE: 'contain' ensures the whole logo is visible */
+    object-fit: contain; 
+    /* Remove border-radius from the img itself to prevent double-clipping */
+    border-radius: 0; 
 }
-
 .product-info {
     flex: 1;
 }
