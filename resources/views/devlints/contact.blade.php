@@ -6,62 +6,74 @@
 @push('styles')
     <link rel="stylesheet" href="{{ asset('static/css/contact-us.css') }}">
     <style>
-        /* Ensuring the layout feels full without the form */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
+        .contact-container {
+            max-width: 800px; /* Limits width to keep cards centered and readable */
+            margin: 0 auto;
+            padding: 20px;
         }
+
+        .contact-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            align-items: center; /* Centers cards horizontally */
+            margin-top: 40px;
+        }
+
         .contact-card {
             background: #fff;
             padding: 40px;
             border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            /* Removed shadow, added thin border */
+            border: 1px solid #e2e8f0; 
             text-align: center;
-            transition: transform 0.3s ease;
-            border: 1px solid #eee;
+            width: 100%; /* Occupies container width */
+            transition: border-color 0.3s ease;
         }
+
         .contact-card:hover {
-            transform: translateY(-5px);
+            border-color: #007bff; /* Subtle highlight on hover */
         }
+
         .contact-card h3 {
-            margin-bottom: 15px;
-            color: #333;
-            font-size: 1.5rem;
+            margin-bottom: 12px;
+            color: #1a202c;
+            font-size: 1.6rem;
+            font-weight: 700;
         }
+
         .contact-card p {
-            color: #666;
-            line-height: 1.6;
-        }
-        .contact-card a {
-            color: #007bff; /* Adjust to your brand color */
-            text-decoration: none;
-            font-weight: bold;
+            color: #4a5568;
+            margin-bottom: 8px;
             font-size: 1.1rem;
         }
+
+        .contact-card a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
         .contact-us-head {
-            max-width: 800px;
-            margin: 0 auto 40px auto;
             text-align: center;
+            margin-bottom: 20px;
         }
     </style>
 @endpush
 
 @section("content")
-    <section class="contact-section" style="padding: 80px 0;">
+    <section class="contact-section" style="padding: 60px 0;">
 
         <div class="contact-us-head">
             <h2>Get in Touch to Build Your <span>Dream Project</span> Today!</h2>
-            <p>Ready to start your next digital venture? We're here to help you scale. Reach out through any of the channels below and our team will get back to you within 24 hours.</p>
+            <p>We're here to help you scale. Reach out through any of the channels below.</p>
         </div>
 
-        <div class="container">
+        <div class="contact-container">
             <div class="contact-grid">
                 
                 <div class="contact-card">
-                    <div class="icon-wrapper">
-                        </div>
                     <h3>Email Us</h3>
                     <p>Our friendly team is here to help with your inquiries.</p>
                     <a href="mailto:info@devlints.com">info@devlints.com</a>
@@ -79,12 +91,6 @@
                     <a href="https://wa.me/923070861396" target="_blank">Start WhatsApp Chat</a>
                 </div>
 
-            </div>
-
-            <div style="margin-top: 80px; text-align: center;">
-                <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 40px;">
-                <h3>Serving Clients Globally</h3>
-                <p style="color: #666;">United States • United Kingdom • Europe • Middle East • Pakistan</p>
             </div>
         </div>
 
