@@ -409,7 +409,7 @@
 
     <section class="blog-section">
 
-        <h2 class="section-heading">Blogs & Publicationss</h2>
+        <h2 class="section-heading">Blogs & Publications</h2>
 
         <p class="section-para">
             Sharing insights, updates, and stories that inspire and inform.

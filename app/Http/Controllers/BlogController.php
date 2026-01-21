@@ -19,7 +19,7 @@ class BlogController extends Controller
     public function allBlogView(Request $request){
 
         $blogs = Blog::where('status', 'published')
-            ->whereNull('product_id')
+            // ->whereNull('product_id')
             ->get();
 
         return view('devlints.all_blog', compact('blogs'));
