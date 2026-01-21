@@ -428,7 +428,7 @@
                     <a href="{{ route('blog_detail', $blog->slug) }}"><h2> {{$blog->title}} </h2></a>
                     <p>
                         <span>{{ $blog->author_name ?? 'Admin' }}</span> <span
-                            style="font-weight: 400; font-size: 16px; margin-left: 10px">[ {{$blog->author_bio}} ]</span>
+                            style="font-weight: 400; font-size: 16px; margin-left: 10px"> {{$blog->author_bio}} </span>
                         <br>
                         {{ optional($blog->published_at)->format('F d, Y') ?? 'Date not available' }}
                     </p>
