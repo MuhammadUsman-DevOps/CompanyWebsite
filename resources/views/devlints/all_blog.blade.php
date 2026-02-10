@@ -69,7 +69,28 @@
 @push('styles')
 
     <style>
+        .filter-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
 
+.pill {
+    padding: 8px 20px;
+    border-radius: 50px;
+    border: 1px solid #007bff;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.pill:hover, .pill.active {
+    background-color: #007bff;
+    color: white;
+}
 
         body{
             background: linear-gradient(135deg, #e0f2fe 0%, #f5f7fa 100%);
@@ -83,7 +104,6 @@
             padding: 120px 20px;
             display: flex;
             flex-direction: column;
-            row-gap: 40px;
             overflow: hidden;
 
         }
@@ -192,11 +212,21 @@
 @section('content')
 
     <div class="all-blog-container">
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Search blogs by title..." oninput="searchBlogs()">
-        </div>
+      
 
-
+        <div class="filter-pills">
+        <a href="{{ route('all_blogs', ['product' => 'all']) }}" 
+           class="pill {{ request('product') == 'all' || !request('product') ? 'active' : '' }}">
+           All Blogs
+        </a>
+        
+        @foreach($products as $product)
+            <a href="{{ route('all_blogs', ['product' => $product->id]) }}" 
+               class="pill {{ request('product') == $product->id ? 'active' : '' }}">
+               {{ $product->name }}
+            </a>
+        @endforeach
+    </div>
         <div class="blog-list" id="blogList">
 
             @foreach($blogs as $blog)
@@ -215,17 +245,7 @@
 
 @push('scripts')
 
-    <script>
-        function searchBlogs() {
-            const input = document.getElementById('searchInput').value.toLowerCase();
-            const posts = document.querySelectorAll('.blog-post');
-
-            posts.forEach(post => {
-                const title = post.getAttribute('data-title').toLowerCase();
-                post.classList.toggle('hidden', !title.includes(input));
-            });
-        }
-    </script>
+   
 
 @endpush
 

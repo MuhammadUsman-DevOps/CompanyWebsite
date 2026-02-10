@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Providers;
-
+use App\Models\Product;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +20,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        View::composer('layouts.master', function ($view) {
+        $view->with('nav_products', Product::where('is_active', true)->orderBy('order', 'asc')->get());
+    });
     }
 }

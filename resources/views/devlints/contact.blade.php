@@ -1,129 +1,98 @@
 @extends('layouts.master')
 @section('title', 'Contact Devlints | Get a Free Consultation for Your Project')
 
-@section('meta_description', 'Contact Devlints to discuss your web app, mobile app, SaaS, AI, or eCommerce project. Get a free consultation, project estimate, and a clear plan for delivery—serving US/UK/EU clients.')
-
-@section('meta_keywords', 'contact devlints, software development company contact, get a quote web development, mobile app development consultation, saas development quote, hire developers contact, free consultation')
-
-@section('og_title', 'Contact Devlints | Let’s Build Your Project')
-@section('og_description', 'Get in touch with Devlints for a free consultation and project estimate. We build web apps, mobile apps, SaaS platforms, and AI solutions for US/UK/EU clients.')
-@section('og_image', asset('static/images/og/devlints-og.webp'))
-@section('og_url', url()->current())
-
-@section('twitter_title', 'Contact Devlints')
-@section('twitter_description', 'Request a free consultation and project estimate. Web, mobile, SaaS, and AI development for US/UK/EU clients.')
-@section('twitter_image', asset('static/images/og/devlints-og.webp'))
-
-@section('canonical', url()->current())
-@section('robots', 'index, follow')
-
-@section('schema_name', 'Contact Us')
-@section('schema_description', 'Contact Devlints for a free consultation and quote. We build web apps, mobile apps, SaaS platforms, AI solutions, and eCommerce systems for global clients.')
-@push('structured_data')
-    <script type="application/ld+json">
-        {
-          "@context":"https://schema.org",
-          "@type":"ContactPage",
-          "name":"Contact Devlints",
-          "url":"{{ url()->current() }}",
-  "description":"Contact Devlints for a free consultation and quote for web apps, mobile apps, SaaS, AI, and eCommerce development.",
-  "isPartOf": { "@id":"{{ url('/') }}#website" },
-  "about": { "@id":"{{ url('/') }}#organization" }
-}
-    </script>
-
-    <script type="application/ld+json">
-        {
-          "@context":"https://schema.org",
-          "@type":"ContactPoint",
-          "contactType":"sales",
-          "email":"info@devlints.com",
-          "telephone":"+92 307 0861396",
-          "availableLanguage":["English"],
-          "areaServed":["United States","United Kingdom","Europe","Middle East","Pakistan"],
-          "url":"{{ url()->current() }}"
-}
-    </script>
-
-    <script type="application/ld+json">
-        {
-          "@context":"https://schema.org",
-          "@type":"BreadcrumbList",
-          "itemListElement":[
-            {"@type":"ListItem","position":1,"name":"Home","item":"{{ url('/') }}"},
-    {"@type":"ListItem","position":2,"name":"Contact Us","item":"{{ url()->current() }}"}
-  ]
-}
-    </script>
-@endpush
+@section('meta_description', 'Contact Devlints to discuss your web app, mobile app, SaaS, AI, or eCommerce project. Get a free consultation, project estimate, and a clear plan for delivery.')
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('static/css/contact-us.css') }}">
+    <style>
+        .contact-container {
+            max-width: 800px; /* Limits width to keep cards centered and readable */
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .contact-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            align-items: center; /* Centers cards horizontally */
+            margin-top: 40px;
+        }
+
+        .contact-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            /* Removed shadow, added thin border */
+            border: 1px solid #e2e8f0; 
+            text-align: center;
+            width: 100%; /* Occupies container width */
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-card:hover {
+            border-color: #007bff; /* Subtle highlight on hover */
+        }
+
+        .contact-card h3 {
+            margin-bottom: 12px;
+            color: #1a202c;
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+
+        .contact-card p {
+            color: #4a5568;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .contact-card a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .contact-us-head {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
 @endpush
 
 @section("content")
-    <section class="contact-section">
+    <section class="contact-section" style="padding: 60px 0;">
 
         <div class="contact-us-head">
-
             <h2>Get in Touch to Build Your <span>Dream Project</span> Today!</h2>
-            <p>Looking to build a professional website for your business? Whether you’re launching a new project or upgrading your current site, our experienced team is ready to help you achieve your goals. Let’s turn your vision into a fully functional, high-performing website.</p>
-
-
+            <p>We're here to help you scale. Reach out through any of the channels below.</p>
         </div>
 
-        <div class="container">
-            <!-- Left: Contact Form -->
-            <div class="form-column">
+        <div class="contact-container">
+            <div class="contact-grid">
+                
+                <div class="contact-card">
+                    <h3>Email Us</h3>
+                    <p>Our friendly team is here to help with your inquiries.</p>
+                    <a href="mailto:info@devlints.com">info@devlints.com</a>
+                </div>
 
-                @if (session('success'))
-                    <div style="background-color: #d4edda; color: #155724; padding: 10px; margin-bottom: 10px; border: 1px solid #c3e6cb; border-radius: 5px;">
-                        {{ session('success') }}
-                    </div>
-                @endif
+                <div class="contact-card">
+                    <h3>Call Us</h3>
+                    <p>Mon–Fri from 8am to 5pm (PKT).</p>
+                    <a href="tel:+923070861396">+92 307 0861396</a>
+                </div>
 
-                <form method="POST"  action="/contact">
-                    @csrf
-
-                    <div class="row">
-
-                            <label>First name</label>
-                            <input type="text" name="first_name" placeholder="First name" required>
-
-
-                            <label>Last name</label>
-                            <input type="text" name="last_name" placeholder="Last name" required>
-
-                    </div>
-
-                    <label>Email</label>
-                    <input type="email" name="email" placeholder="you@company.com" required>
-
-                    <label>Phone number</label>
-                    <input type="tel" name="phone" placeholder="+1 (555) 000-0000" required>
-
-                    <label>Message</label>
-                    <textarea name="message" placeholder="Leave us a message..." required></textarea>
-
-                    <button type="submit">Send message</button>
-                </form>
-
-            </div>
-
-            <!-- Right: Info Section -->
-            <div class="info-column">
-                <h3>Chat with us</h3>
-
-                <p><a href="#">info@devlints.com</a></p>
-                <p><a href="">+92 307 0861396</a></p>
-
-                <h3>Call us</h3>
-                <p>Call our team Mon–Fri from 8am to 5pm.</p>
-                <p><a href="">+92 307 0861396</a></p>
+                <div class="contact-card">
+                    <h3>Quick Chat</h3>
+                    <p>For faster response times, message us on WhatsApp.</p>
+                    <a href="https://wa.me/923070861396" target="_blank">Start WhatsApp Chat</a>
+                </div>
 
             </div>
         </div>
 
     </section>
-
 @endsection

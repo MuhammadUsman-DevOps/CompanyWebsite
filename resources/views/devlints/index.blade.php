@@ -409,7 +409,7 @@
 
     <section class="blog-section">
 
-        <h2 class="section-heading">Blogs & Publicationss</h2>
+        <h2 class="section-heading">Blogs & Publications</h2>
 
         <p class="section-para">
             Sharing insights, updates, and stories that inspire and inform.
@@ -428,7 +428,7 @@
                     <a href="{{ route('blog_detail', $blog->slug) }}"><h2> {{$blog->title}} </h2></a>
                     <p>
                         <span>{{ $blog->author_name ?? 'Admin' }}</span> <span
-                            style="font-weight: 400; font-size: 16px; margin-left: 10px">[ {{$blog->author_bio}} ]</span>
+                            style="font-weight: 400; font-size: 16px; margin-left: 10px"> {{$blog->author_bio}} </span>
                         <br>
                         {{ optional($blog->published_at)->format('F d, Y') ?? 'Date not available' }}
                     </p>
