@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Blog;
 use App\Models\CaseStudy;
 use Illuminate\Http\Request;
+use App\Models\Product;
 
 class DevlintsController extends Controller
 {
@@ -55,6 +56,14 @@ class DevlintsController extends Controller
         return view('devlints.terms_conditions');
     }
 
-
+   public function devlintsAppsView()
+{
+    $products = Product::where('is_active', true)
+        ->orderBy('is_featured', 'desc')
+        ->orderBy('order', 'asc')
+        ->get();
+ 
+    return view('devlints.products', compact('products'));
+}
 
 }

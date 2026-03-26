@@ -307,7 +307,7 @@
                             </a>
                         </div>
                         <div class="product-description">
-                            {{ $product->description }} </div>
+                            {{ $product->tagline }} </div>
                     </div>
                 </div>
             @endforeach
@@ -408,7 +408,8 @@
                     </div>
                     <img src="{{ asset('static/images/down-arrow.png') }}" alt="" class="arrow">
                 </li>
-
+                
+                <li><a href="{{ route("devlints_apps") }}">Devlints Apps</a></li>
                 <li><a href="{{ route("contact_us") }}">Contact</a></li>
                 <li><a href="{{ route("careers") }}">Careers</a></li>
                 <li><a href="/">HyperLab Academy</a></li>

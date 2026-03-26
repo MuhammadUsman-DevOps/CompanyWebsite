@@ -19,6 +19,7 @@ Route::get('/contact-us/', [DevlintsController::class, 'contactUsView'])->name('
 Route::get('/careers/', [DevlintsController::class, 'careerView'])->name('careers');
 Route::get('/privacy-policy', [DevlintsController::class, 'privacyPolicyView'])->name('privacy_policy');
 Route::get('/terms-conditions', [DevlintsController::class, 'termsConditionsView'])->name('terms_conditions');
+Route::get('/devlintsapps', [DevlintsController::class, 'devlintsAppsView'])->name('devlints_apps');
 
 Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap.index');
 Route::get('/sitemap-pages.xml', [SitemapController::class, 'pages'])->name('sitemap.pages');
