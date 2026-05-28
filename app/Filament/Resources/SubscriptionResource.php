@@ -30,12 +30,13 @@ class SubscriptionResource extends Resource
                 ->searchable()
                 ->reactive(),
 
-            // 2. Product Dropdown
+            // 2. Product Dropdown (for filtering plans)
             Forms\Components\Select::make('product_id')
                 ->label('Product')
                 ->options(Product::pluck('name', 'id'))
                 ->required()
-                ->reactive(),
+                ->reactive()
+                ->helperText('Select a product to filter available plans'),
 
             // 3. Plan Dropdown (filtered by product)
             Forms\Components\Select::make('plan_id')
@@ -52,7 +53,8 @@ class SubscriptionResource extends Resource
                     return Plan::where('product_id', $productId)
                         ->where('is_active', true)
                         ->pluck('name', 'id');
-                }),
+                })
+                ->helperText('The customer-product relationship will be created automatically'),
 
             // Paddle subscription details
             Forms\Components\TextInput::make('paddle_subscription_id')

@@ -13,6 +13,26 @@ class Subscription extends Model
     public $incrementing = false;
     protected $keyType = 'string';
 
+    protected static function boot(): void
+    {
+        parent::boot();
+
+        static::creating(function (self $subscription) {
+            if (! $subscription->customer_product_id && $subscription->plan_id && $subscription->customer_id) {
+                $plan = Plan::find($subscription->plan_id);
+
+                if ($plan) {
+                    $customerProduct = CustomerProduct::firstOrCreate([
+                        'customer_id' => $subscription->customer_id,
+                        'product_id'  => $plan->product_id,
+                    ]);
+
+                    $subscription->customer_product_id = $customerProduct->id;
+                }
+            }
+        });
+    }
+
     protected $fillable = [
         'customer_product_id',
         'customer_id',
